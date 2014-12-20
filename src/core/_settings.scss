@@ -1,0 +1,174 @@
+// =====================================
+// Settings
+// =====================================
+
+// Colors
+// -------------------------------------
+
+// Grays
+$gray-darker:            #212121 !default;
+$gray-dark:              #424242 !default;
+$gray:                   #757575 !default;
+$gray-light:             #D8D8D8 !default;
+$gray-lighter:           #F0F0F0 !default;
+
+// Brand colors
+$brand-primary:         #2196F3 !default; // Blue
+$brand-secondary:       #F44336 !default; // Red
+$brand-tertiary:        #4CAF50 !default; // Green
+
+$brand-info:            $brand-primary !default;
+$brand-error:           $brand-secondary !default;
+$brand-success:         $brand-tertiary !default;
+
+// Default colors
+$body-background:       white !default;
+$text-color:            $gray-darker !default;
+$text-color-light:      $gray;
+$text-color-invert:     white;
+
+// Links
+$link-color:            $brand-primary !default;
+
+// Selection
+$selection-color:       inherit;
+$selection-background:  rgba(red($link-color), green($link-color), blue($link-color), .5);
+
+
+
+
+// Content
+// -------------------------------------
+
+$type-scale:              1.414;
+
+$font-family-sans:        'Lato', sans-serif !default;
+$font-family-serif:       'Georgia', serif !default;
+$font-family-mono:        monospace, serif !default;
+
+$font-size-md:            1em !default;
+$font-size-lg:            1.414em !default;
+$font-size-sm:            0.707em !default;
+
+$font-weight-normal:      300 !default;
+$font-weight-bold:        700 !default;
+$font-weight-light:       100 !default;
+
+$line-height-lg:          1.618em !default;
+$line-height-md:          1.414em !default;
+$line-height-sm:          1.2em !default;
+
+$letter-spacing-md:       0.075em !default;
+$letter-spacing-sm:       0.05em !default;
+$letter-spacing-lg:       0.15em !default;
+
+
+// Paddings
+// -------------------------------------
+
+$padding-h-md:       10px !default;
+$padding-v-md:       5px !default;
+
+$padding-h-sm:       $padding-h-md / 2 !default;
+$padding-v-sm:       $padding-v-md / 2 !default;
+
+$padding-h-lg:       $padding-h-md * 2 !default;
+$padding-v-lg:       $padding-v-md * 2 !default;
+
+
+// Headings
+// -------------------------------------
+
+$font-size-h6:            $font-size-sm !default;
+$font-size-h5:            $font-size-md !default;
+$font-size-h4:            $font-size-lg !default;
+$font-size-h3:            1.999em !default;
+$font-size-h2:            2.827em !default;
+$font-size-h1:            3.998em !default;
+
+$headings-font-family:    $font-family-sans !default;
+$headings-font-weight:    $font-weight-normal !default;
+$headings-line-height:    $line-height-sm !default;
+$headings-text-color:     inherit !default;
+
+
+// Space
+// -------------------------------------
+
+$space-md:      20px !default;
+$space-sm:      $space-md / 2 !default;
+$space-lg:      $space-md * 2 !default;
+
+
+// Breakepoints
+// -------------------------------------
+
+$screen-sm:           20em !default;
+$screen-md:           48em !default;
+$screen-lg:           64em !default;
+
+$screen-sm-half:      $screen-sm + (($screen-md - $screen-sm) / 2) !default;
+$screen-md-half:      $screen-md + (($screen-lg - $screen-md) / 2) !default;
+
+
+// Duration
+// -------------------------------------
+
+$duration-medium:       0.5s !default;
+$duration-short:        $duration-medium / 2;
+$duration-long:         $duration-medium * 2 !default;
+
+
+// Grid
+// -------------------------------------
+
+$grid-gutter-md:        $space-sm !default;
+$grid-gutter-sm:        $space-sm / 2 !default;
+$grid-gutter-lg:        $space-md !default;
+
+
+// Arrange
+// -------------------------------------
+
+$arrange-gutter:         $grid-gutter-md !default;
+
+
+// Other
+// -------------------------------------
+
+$disabled-opacity:        0.6 !default;
+$color-function-value:    6% !default;
+
+
+// Border radius
+// -------------------------------------
+
+$border-radius-md:       4px !default;
+$border-radius-sm:       2px !default;
+$border-radius-lg:       6px !default;
+
+
+// Hr
+// -------------------------------------
+
+$hr-border-color:        $gray-light;
+$hr-border:              1px solid $hr-border-color !default;
+
+
+// Form
+// -------------------------------------
+
+$input-multiple-size:         20px !default;
+
+
+// Table
+// -------------------------------------
+
+$table-border:              1px solid $hr-border-color !default;
+
+// Easing functions
+// -------------------------------------
+
+$ease-out-quint:       cubic-bezier(0.230, 1.000, 0.320, 1.000);
+$ease-in-quint:        cubic-bezier(0.755, 0.050, 0.855, 0.060);
+$ease-in-out-quint:    cubic-bezier(0.860, 0.000, 0.070, 1.000);

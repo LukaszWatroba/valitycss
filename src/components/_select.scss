@@ -1,0 +1,130 @@
+// =====================================
+// Select
+// =====================================
+
+
+/**
+ * Example: select box
+ *
+  <div class="Select [Select--modifier]">
+    <select name="options">
+      <optgroup label="Option Group 1">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </optgroup>
+      <optgroup label="Option Group 2">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </optgroup>
+    </select>
+  </div>
+ */
+
+
+.Select {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &::after {
+    font-family: 'Arial';
+    content: ' ';
+    height: 18px;
+    width: 18px;
+    line-height: 1.2em;
+    right: 15px;
+    top: 50%;
+    transform: translate(50%, -50%);
+    background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" enable-background="new 0 0 18 18" xml:space="preserve"><polygon fill="#212121" points="12,7 9,12.2 6,7 "/></svg>');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &::before {
+    width: 30px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+  &.is-disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: $disabled-opacity;
+  }
+}
+
+.Select > select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  padding: $padding-v-md;
+  padding-right: 35px;
+  cursor: pointer;
+  line-height: normal;
+  width: 100%;
+  border: 1px solid transparent;
+
+  text-indent: 0.01px;
+  text-overflow: '';
+
+  outline: none;
+}
+
+
+// -------------------------------------
+// Select madifiers
+// -------------------------------------
+
+// Modifier: default select box
+// -------------------------------------
+
+.Select--default {
+  &::before { 
+    border-radius: 0 $border-radius-md $border-radius-md 0;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  > select {
+    border-radius: $border-radius-md;
+    background-color: $gray-light;
+    border-color: $gray-light;
+    color: $text-color;
+    transition: all $duration-medium;
+
+    &:hover,
+    &:active,
+    &.is-active,
+    &:focus {
+      background-color: lighten($gray-light, $color-function-value);
+      border-color: lighten($gray-light, $color-function-value);
+    }
+  }
+}
+
+
+// Modifier: large select box
+// -------------------------------------
+
+.Select--lg {
+  font-size: $font-size-lg;
+}
+
+
+// Modifier: small select box
+// -------------------------------------
+
+.Select--sm {
+  font-size: $font-size-sm;
+}
+
+

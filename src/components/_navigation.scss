@@ -1,0 +1,45 @@
+// =====================================
+// Navigation
+// =====================================
+
+
+/**
+ * Example: navigation
+ *
+  <ol class="Navigation [Navigation--modifier]">
+    <li class="Navigation-item">
+      [content]
+    </li>
+  </ol>
+ */
+
+
+.Navigation {
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Navigation-item {
+  font-size: 1rem;
+}
+
+.Navigation:not(.Navigation--hz) {
+  .Navigation-item {
+    display: block;
+  }
+}
+
+
+// -------------------------------------
+// Navigation modifires
+// -------------------------------------
+
+// Modifier: horizontal
+// -------------------------------------
+
+.Navigation--hz .Navigation-item {
+  display: inline-block;
+}
+

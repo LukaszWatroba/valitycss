@@ -1,0 +1,62 @@
+// =====================================
+// Spinner
+// =====================================
+
+
+/**
+ * Example HTML:
+ *
+  <span class="Spinner [Spinner--modifier]"></span>
+ */
+
+
+@keyframes Spinner-spin {
+  to {
+    transform: rotate( 360deg );
+  }
+}
+
+
+.Spinner {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+
+  border: solid 2px transparent;
+  border-top-color: $text-color;
+  border-left-color: $text-color;
+  border-radius: 50%;
+
+  animation: Spinner-spin $duration-medium linear infinite;
+}
+
+
+// -------------------------------------
+// Spinner modifiers
+// -------------------------------------
+
+// Modifier: default spinner
+// -------------------------------------
+
+.Spinner--default {
+  border-top-color: $brand-success;
+  border-left-color: $brand-success;
+}
+
+// Modifier: large spinner
+// -------------------------------------
+
+.Spinner--lg {
+  width: 22px;
+  height: 22px;
+  border-width: 3px;
+}
+
+// Modifier: small spinner
+// -------------------------------------
+
+.Spinner--sm {
+  width: 11px;
+  height: 11px;
+  border-width: 1px;
+}

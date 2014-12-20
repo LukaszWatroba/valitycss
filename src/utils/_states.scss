@@ -1,0 +1,85 @@
+// =====================================
+// States
+// =====================================
+
+
+// Actions
+// -------------------------------------
+
+.u-isActionable {
+  cursor: pointer;
+}
+
+.u-isDisabled {
+  cursor: default;
+}
+
+.u-isDraggable {
+  cursor: move;
+}
+
+
+// Display
+// -------------------------------------
+
+.u-isHidden {
+  display: none;
+  visibility: hidden;
+}
+
+.u-isShown {
+  display: block;
+  visibility: visible;
+}
+
+table.u-isShown {
+  display: table;
+}
+
+tr.u-isShown,
+tr.u-isShown {
+  display: table-row;
+}
+
+td.u-isShown,
+th.u-isShown {
+  display: table-cell;
+}
+
+
+// Visability
+// -------------------------------------
+
+.u-isInvisible {
+  visibility: hidden;
+}
+
+.u-isVisible {
+  visibility: visible;
+}
+
+
+// Opacity
+// -------------------------------------
+
+.u-isTransparent {
+  opacity: 0;
+}
+
+.u-isOpaque {
+  opacity: 1;
+}
+
+
+// Visualy hidden
+// -------------------------------------
+
+.u-isHiddenVisually {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}

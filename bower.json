@@ -1,0 +1,26 @@
+{
+  "name": "valitycss",
+  "version": "0.0.1",
+  "description": "Minimalist, responsive and extensible framework build based on OOCSS and BEM principles.",
+  "homepage": "http://lukaszwatroba.github.io/valitycss",
+  "authors": [
+    "Łukasz Wątroba <l@lukaszwatroba.com>"
+  ],
+  "description": "OOCSS, BEM, SCSS Framework",
+  "keywords": [
+    "OOCSS",
+    "BEM",
+    "SCSS",
+    "SASS",
+    "CSS"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "*.sublime-*"
+  ]
+}

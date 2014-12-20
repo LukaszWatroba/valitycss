@@ -1,0 +1,79 @@
+// =====================================
+// Arrange
+// =====================================
+
+
+/**
+ * Example HTML:
+ *
+  <div class="Arrange [Arrange--middle|Arrange--bottom|Arrange--equal] [Arrange--withGutter]">
+    <div class="Arrange-item Arrange-item--fit">
+      [content]
+    </div>
+    <div class="Arrange-item Arrange-item--fill">
+      [content]
+    </div>
+    <div class="Arrange-item Arrange-item--fit">
+      [content]
+    </div>
+  </div>
+ */
+
+
+.Arrange {
+  box-sizing: border-box;
+  display: table;
+  margin: 0;
+  min-width: 100%;
+  padding: 0;
+  table-layout: auto;
+}
+
+.Arrange-item {
+  display: table-cell;
+  padding: 0;
+  vertical-align: top;
+}
+
+.Arrange-item--fill {
+  width: 100%;
+}
+
+.Arrange-item--fill img {
+  height: auto;
+  max-width: 100%;
+}
+
+.Arrange-item--fit img {
+  max-width: none !important;
+  width: auto !important;
+}
+
+
+// Modifiers: vertical alignment
+// -------------------------------------
+
+.Arrange--middle .Arrange-item--fill,
+.Arrange--middle .Arrange-item--fit {
+  vertical-align: middle;
+}
+
+.Arrange--bottom .Arrange-item--fill,
+.Arrange--bottom .Arrange-item--fit {
+  vertical-align: bottom;
+}
+
+
+// Modifier: equal-width
+// -------------------------------------
+
+.Arrange--equal {
+  table-layout: fixed;
+}
+
+.Arrange--equal > .Arrange-item--fill,
+.Arrange--equal > .Arrange-item--fit {
+  width: 1%;
+}
+
+

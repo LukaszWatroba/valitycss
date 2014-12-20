@@ -1,0 +1,260 @@
+// =====================================
+// Base
+// =====================================
+
+*,
+*:after,
+*::before {
+  box-sizing: border-box;
+}
+
+*::selection {
+  color: $selection-color;
+  background: $selection-background;
+}
+
+html {
+  font-size: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  background: $body-background;
+  color: $text-color;
+  font-family: $font-family-sans;
+  font-size: $font-size-md;
+  line-height: $line-height-md;
+  font-weight: $font-weight-normal;
+}
+
+body, button, select, textarea, input {
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $link-color;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($link-color, 10%);
+    text-decoration: none;
+    outline:0;
+  }
+
+  &:visited {
+    text-decoration: underline;
+  }
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+
+// Forms
+// -------------------------------------
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+button,
+select,
+textarea,
+select optgroup, {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+input,
+label,
+select,
+textarea {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+input,
+button,
+select,
+textarea {
+  box-sizing: border-box;
+}
+
+input[type="search"] {
+  box-sizing: border-box;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+input[type="number"] {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    height: auto;
+  }
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  // Default
+  outline: thin dotted #333;
+  // WebKit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-style: italic;
+  color: $text-color-light;
+}
+
+output {
+  display: block;
+  font-size: $font-size-md;
+  line-height: $line-height-md;
+  color: $text-color;
+  vertical-align: middle;
+}
+
+
+// Tables
+// -------------------------------------
+
+table {
+  max-width: 100%;
+}
+
+th {
+  text-align: left;
+}
+
+
+// Headings
+// -------------------------------------
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  color: $headings-text-color;
+  line-height: $headings-line-height;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+h2 {
+  font-size: $font-size-h2;
+}
+h3 {
+  font-size: $font-size-h3;
+}
+h4 {
+  font-size: $font-size-h4;
+}
+h5 {
+  font-size: $font-size-h5;
+}
+h6 {
+  font-size: $font-size-h6;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-md;
+}
+
+
+// Paragraphs
+// -------------------------------------
+
+p {}
+
+small {
+  font-size: $font-size-sm;
+  line-height: $line-height-md;
+}
+
+strong {
+  font-weight: $font-weight-bold;
+}
+
+em {
+  font-style: italic;
+}
+
+
+// Code
+// -------------------------------------
+
+code,
+pre {
+  font-family: $font-family-mono;
+}
+
+
+// Quotes
+// -------------------------------------
+
+blockquote {
+  font-style: italic;
+  display: inline-block;
+}
+
+
+// Lists
+// -------------------------------------
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+// Horizontal rules
+// -------------------------------------
+
+hr {
+  margin: $space-md 0;
+  border: 0;
+  border-top: 1px solid $hr-border-color;
+}
+
+
+

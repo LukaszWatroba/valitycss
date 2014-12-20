@@ -1,0 +1,130 @@
+// =====================================
+// Responsive
+// =====================================
+
+
+.u-responsiveImage {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+// Responsive: breakpoint 1
+// -------------------------------------
+
+@media (min-width: $screen-sm) {
+  .u-sm-isHidden {
+    display: none;
+    visibility: hidden;
+  }
+  
+  .u-sm-isShown {
+    display: block;
+    visibility: visible;
+  }
+
+  table.u-sm-isShown {
+    display: table;
+  }
+
+  tr.u-sm-isShown,
+  tr.u-sm-isShown {
+    display: table-row;
+  }
+
+  td.u-sm-isShown,
+  th.u-sm-isShown {
+    display: table-cell;
+  }
+}
+
+
+// Responsive: breakpoint 2
+// -------------------------------------
+
+@media (min-width: $screen-md) {
+  .u-md-isHidden {
+    display: none;
+    visibility: hidden;
+  }
+  
+  .u-md-isShown {
+    display: block;
+    visibility: visible;
+  }
+
+  table.u-md-isShown {
+    display: table;
+  }
+
+  tr.u-md-isShown,
+  tr.u-md-isShown {
+    display: table-row;
+  }
+
+  td.u-md-isShown,
+  th.u-md-isShown {
+    display: table-cell;
+  }
+}
+
+
+// Responsive: breakpoint 3
+// -------------------------------------
+
+@media (min-width: $screen-lg) {
+  .u-lg-isHidden {
+    display: none;
+    visibility: hidden;
+  }
+  
+  .u-lg-isShown {
+    display: block;
+    visibility: visible;
+  }
+
+  table.u-lg-isShown {
+    display: table;
+  }
+
+  tr.u-lg-isShown,
+  tr.u-lg-isShown {
+    display: table-row;
+  }
+
+  td.u-lg-isShown,
+  th.u-lg-isShown {
+    display: table-cell;
+  }
+}
+
+
+// Responsive: print
+// -------------------------------------
+
+@media print {
+  .u-print-isHidden {
+    display: none;
+    visibility: hidden;
+  }
+  
+  .u-print-isShown {
+    display: block;
+    visibility: visible;
+  }
+
+  table.u-print-isShown {
+    display: table;
+  }
+
+  tr.u-print-isShown,
+  tr.u-print-isShown {
+    display: table-row;
+  }
+
+  td.u-print-isShown,
+  th.u-print-isShown {
+    display: table-cell;
+  }
+}

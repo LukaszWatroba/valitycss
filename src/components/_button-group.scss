@@ -1,0 +1,107 @@
+// =====================================
+// Button group
+// =====================================
+
+
+/**
+ * Example HTML:
+ * 
+  <div class="ButtonGroup [ButtonGroup--hz|ButtonGroup--borderCollapse]">
+    <div class="ButtonGroup-item">
+      [content]
+    </div>
+    <div class="ButtonGroup-item">
+      [content]
+    </div>
+    <div class="ButtonGroup-item">
+      [content]
+    </div>
+  </div>
+ */
+
+
+.ButtonGroup {
+  display: block;
+  font-size: 0;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+
+.ButtonGroup-item {
+  display: block;
+  font-size: 1rem;
+}
+
+.ButtonGroup-item .Button {
+  &:hover,
+  &:focus,
+  &:active {
+    z-index: 1;
+  }
+}
+
+
+// -------------------------------------
+// Button group modifires
+// -------------------------------------
+
+// Modifier: horizontal buttons
+// -------------------------------------
+
+.ButtonGroup--hz > .ButtonGroup-item {
+  display: inline-block;
+}
+
+
+// Modifier: horizontal collapse
+// -------------------------------------
+
+.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item {
+  margin-top: -1px;
+}
+
+.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:first-child {
+  margin-top: 0;
+}
+
+.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:not(:first-child):not(:last-child) > .Button {
+  border-radius: 0;
+}
+
+.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:first-child:not(:only-child) > .Button {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:last-child:not(:only-child) > .Button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+// Modifier: horizontal collapse
+// -------------------------------------
+
+.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item {
+  margin-left: -1px;
+}
+
+.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:first-child {
+  margin-left: 0;
+}
+
+.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:not(:first-child):not(:last-child) > .Button {
+  border-radius: 0;
+}
+
+.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:first-child:not(:only-child) > .Button {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:last-child:not(:only-child) > .Button {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}

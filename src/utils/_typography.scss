@@ -1,0 +1,130 @@
+// =====================================
+// Typography 
+// =====================================
+
+
+// Headings
+// -------------------------------------
+
+.u-h1,
+.u-h2,
+.u-h3,
+.u-h4,
+.u-h5,
+.u-h6 {
+  line-height: $headings-line-height;
+  font-weight: $headings-font-weight;
+  color: $headings-text-color;
+  margin-bottom: $space-md;
+}
+
+.u-h1 {
+  font-size: $font-size-h1;
+}
+.u-h2 {
+  font-size: $font-size-h2;
+}
+.u-h3 {
+  font-size: $font-size-h3;
+}
+.u-h4 {
+  font-size: $font-size-h4;
+}
+.u-h5 {
+  font-size: $font-size-h5;
+}
+.u-h6 {
+  font-size: $font-size-h6;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-md;
+}
+
+
+// Font weights
+// -------------------------------------
+
+.u-weightLight      { font-weight: $font-weight-light !important; }
+.u-weightNormal     { font-weight: $font-weight-normal !important; }
+.u-weightBold       { font-weight: $font-weight-bold !important; }
+
+
+// Capital case
+// -------------------------------------
+
+.u-caps {
+  text-transform: uppercase !important;
+}
+
+.u-lower {
+  text-transform: lowercase !important;
+}
+
+
+// Paragraphs
+// -------------------------------------
+
+.u-paragraphsIndent p + p {
+  text-indent: $line-height-md * 2;
+  margin-top: -$line-height-md;
+}
+
+.u-paragraphsWordBreak p {
+  word-break: break-all;
+  hyphens: auto;
+}
+
+
+// Text formatting
+// -------------------------------------
+
+.u-formatedText {
+  h1, 
+  h2, 
+  h3, 
+  h4, 
+  h5, 
+  h6 {
+    margin: 0 0 $space-md;
+  }
+  
+  blockquote,
+  dl,
+  dd,
+  ol,
+  ul,
+  figure,
+  p,
+  pre {
+    margin: 0 0 $space-md;
+  }
+
+  blockquote {
+    display: block;
+    padding-left: $space-md;
+    border-left: $hr-border;
+    border-left-width: $space-sm / 2;
+  }
+
+  ol,
+  ul {
+    padding: 0 0 0 $space-lg;
+    font-size: 1em;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  img {
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto $space-md;    
+  }
+}
+

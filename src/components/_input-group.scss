@@ -1,0 +1,131 @@
+// =====================================
+// Input group
+// =====================================
+
+
+/**
+ * Example: input with button
+ *
+  <div class="InputGroup [InputGroup--modifier]">
+    <div class="InputGroup-item [InputGroup-item--modifier]">
+      [input|button]
+    </div>
+    <div class="InputGroup-item [InputGroup-item--modifier]">
+      [input|button]
+    </div>
+  </div>
+ */
+
+
+.InputGroup {
+  box-sizing: border-box;
+  display: table;
+  margin: 0;
+  padding: 0;
+  table-layout: auto;
+}
+
+.InputGroup .Button {
+  vertical-align: middle;
+
+  &:hover,
+  &:focus,
+  &:active {
+    z-index: 2;
+  }
+}
+
+.InputGroup .Input {
+  z-index: 1;
+}
+
+
+// Input group item
+// -------------------------------------
+
+.InputGroup-item {
+  display: table-cell;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.InputGroup-item--fill {
+  width: 100%;
+
+  .Input,
+  .InputGroup-addon,
+  .Button {
+    width: 100%;
+  }
+}
+
+.InputGroup-item--fit {}
+
+
+// Input group addon
+// -------------------------------------
+
+.InputGroup-addon {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: $padding-v-md $padding-h-md;
+  vertical-align: middle;
+  line-height: normal;
+  background-color: $gray-light;
+  border-radius: $border-radius-sm;
+  border: 1px solid transparent;
+  color: inherit;
+}
+
+
+// -------------------------------------
+// Input group modifires
+// -------------------------------------
+
+// Modifier: size large
+// -------------------------------------
+
+.InputGroup--lg {
+  font-size: $font-size-lg;
+}
+
+
+// Modifier: size small
+// -------------------------------------
+
+.InputGroup--sm {
+  font-size: $font-size-sm;
+}
+
+
+// Modifier: collapse borders
+// -------------------------------------
+
+.InputGroup--borderCollapse .InputGroup-item:not(:first-child):not(:last-child) > .Input,
+.InputGroup--borderCollapse .InputGroup-item:not(:first-child):not(:last-child) > .Button
+.InputGroup--borderCollapse .InputGroup-item:not(:first-child):not(:last-child) > .InputGroup-addon, {
+  border-radius: 0;
+}
+
+.InputGroup--borderCollapse .InputGroup-item:first-child > .Input,
+.InputGroup--borderCollapse .InputGroup-item:first-child > .Button,
+.InputGroup--borderCollapse .InputGroup-item:first-child > .InputGroup-addon {
+  @include border-right-radius(0);
+}
+
+.InputGroup--borderCollapse .InputGroup-item:last-child > .Input,
+.InputGroup--borderCollapse .InputGroup-item:last-child > .Button,
+.InputGroup--borderCollapse .InputGroup-item:last-child > .InputGroup-addon {
+  @include border-left-radius(0);
+}
+
+.InputGroup--borderCollapse .InputGroup-item:first-child > .Button,
+.InputGroup--borderCollapse .InputGroup-item:first-child > .InputGroup-addon {
+  margin-right: -1px;
+}
+
+.InputGroup--borderCollapse .InputGroup-item:last-child > .Button,
+.InputGroup--borderCollapse .InputGroup-item:last-child > .InputGroup-addon {
+  margin-left: -1px;
+}
+

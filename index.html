@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ValityCSS is minimalist, responsive and extensible framework build based on OOCSS and BEM principles.">
+    <meta name="author" content="Łukasz Wątroba">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,700,300italic' rel='stylesheet' type='text/css'>
+
+    <title>ValityCss</title>
+
+    <link href="./dist/vality.css" rel="stylesheet">
+    
+    <style>
+      /* Just for the demonstration */
+      .Grid--demo {
+        margin-bottom: 20px;
+      }
+
+      .Grid--demo .Grid-cell > div {
+        border: 1px solid #2196F3;
+        border-radius: 4px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="u-md-wrap u-paddingHm u-paddingTl">
+      <header>
+        <div class="u-marginBm">
+          <svg class="u-inlineBlock" version="1.1" width="58px" height="58px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54 54" enable-background="new 0 0 54 54" xml:space="preserve"><g><path fill="#4CAF50" d="M3.1,27.9c0,0,10.2-24.1,11.6-27.2c0.2-0.5,0.6-0.8,1.2-0.6c0.5,0.1,0.8,0.7,1.5,2.2c1.3,2.9,18,37.2,18.7,38.6c0.8,1.6,1,2.6,0.7,3.4c-0.3,0.6-1,1.1-1.8,1.4c-2.3,0.9-20.3,7.8-21.5,8.3c-0.7,0.3-0.8-0.4-1.4-1.7C11.6,51,3.7,32.1,3.1,30.7C2.5,29.3,3.1,27.9,3.1,27.9z"/><path fill="#2196F3" d="M50.9,17.3c-0.3-0.3-0.4-0.4-0.7-0.2c-0.3,0.1-11.5,8.6-16.8,12.5c2.7,5.5,4.7,9.7,5,10.2c0.4,0.8,0.8,1.7,1,2.6c0.1-0.2,0.2-0.3,0.3-0.5c0.9-1.8,11.3-23.4,11.5-23.8C51.3,17.7,51.2,17.7,50.9,17.3z"/></g></svg>
+          <h2 class="u-inlineBlock u-marginLs">ValityCss</h2>
+        </div>
+        
+        <h5 class="u-marginBs">Minimalist, responsive and extensible framework build based on OOCSS and BEM principles.</h5>
+        
+        <hr>
+
+        <nav class="u-paddingBm">
+          <h6 class="u-marginBs">Table of Contents</h6>
+
+          <ol class="Navigation Navigation--hz">
+            <li class="Navigation-item u-marginRm">
+              <a href="#button">Button</a>
+            </li>
+            <li class="Navigation-item u-marginRm">
+              <a href="#form">Form</a>
+            </li>
+            <li class="Navigation-item u-marginRm">
+              <a href="#spinner">Spinner</a>
+            </li>
+            <li class="Navigation-item u-marginRm">
+              <a href="#grid">Grid</a>
+            </li>
+            <li class="Navigation-item u-marginRm">
+              <a href="#table">Table</a>
+            </li>
+            <li class="Navigation-item u-marginRm">
+              <a href="#typography">Typography</a>
+            </li>
+          </ol>
+        </nav>
+      </header>
+
+      <article class="u-paddingVm" id="button">
+        <h4 class="u-h4">Button</h4>
+        
+        <ul class="Navigation Navigation--hz u-marginBm">
+          <li class="Navigation-item">
+            <button class="Button Button--default Button--lg">Button text</button>
+          </li>
+          <li class="Navigation-item u-marginHs">
+            <button class="Button Button--default">Button text</button>
+          </li>
+          <li class="Navigation-item">
+            <button class="Button Button--default Button--sm">Button text</button>
+          </li>
+        </ul>
+
+        <div class="u-marginBm">
+          <div class="ButtonGroup ButtonGroup--hz ButtonGroup--borderCollapse">
+            <div class="ButtonGroup-item">
+              <button class="Button Button--default">Button text</button>
+            </div>
+            <div class="ButtonGroup-item">
+              <button class="Button Button--default">Button text</button>
+            </div>
+            <div class="ButtonGroup-item">
+              <button class="Button Button--default">Button text</button>
+            </div>
+          </div>
+        </div>
+      </article><!-- /#button -->
+
+      <article class="u-paddingVm" id="form">
+        <h4 class="u-h4">Form</h4>
+
+        <form class="Form u-md-size1of2" name="form" action="">
+
+          <div class="Form-item Form-item--stacked">
+            <label class="Form-label" for="nameInput">Name</label>
+            <input class="Input Input--default u-sizeFull" id="nameInput" type="text" name="name" placeholder="Your name" />
+          </div>
+
+          <div class="Form-item Form-item--stacked">
+            <label class="Form-label" for="emailInput">Email</label>
+            <input class="Input Input--default u-sizeFull" id="emailInput" type="text" name="email" placeholder="Your email address" />
+          </div>
+          
+          <div class="Form-item Form-item--stacked">
+            <label class="Form-label" for="usernameInput"></label>
+            <div class="InputGroup InputGroup--borderCollapse">
+              <div class="InputGroup-item">
+                <div class="InputGroup-addon">@</div>
+              </div>
+              <div class="InputGroup-item InputGroup-item--fill">
+                <input class="Input Input--default u-sizeFull" id="usernameInput" type="text" name="username"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="Form-item Form-item--stacked">
+            <div class="InputGroup InputGroup--borderCollapse">
+              <div class="InputGroup-item InputGroup-item--fill">
+                <input class="Input Input--default u-sizeFull" id="searchInput" type="text" name="search"/>
+              </div>
+              <div class="InputGroup-item">
+                <button class="Button Button--default">Search</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="Form-item">
+            <p class="u-marginBs">Sex</p>
+
+            <div class="Radio Radio--default u-marginBs u-inline">
+              <input type="radio" id="maleRadio" name="sex" value="male" />
+              <label for="maleRadio">Male</label>
+            </div>
+
+            <div class="Radio Radio--default u-inline u-marginLm">
+              <input type="radio" id="femaleRadio" name="sex" value="female" />
+              <label for="femaleRadio">Female</label>
+            </div>
+          </div>
+
+          <div class="Form-item Form-item--stacked">
+            <label class="Form-label" for="ageInput">Age</label>
+            <input class="Input Input--default u-size1of3" id="ageInput" type="number" name="text"/>
+          </div>
+
+          <div class="Form-item Form-item--stacked">
+            <label class="Form-label" for="desctiptionInput">About me</label>
+            <textarea class="Input Input--default u-sizeFull" id="desctiptionInput" type="text" name="description"></textarea>
+          </div>
+
+          <div class="Form-item Form-item--stacked">
+            <label class="Form-label" for="optionsSelect">Favourite food</label>
+            <div class="Select Select--default" id="optionsSelect">
+              <select name="options">
+                <option value="" selected disabled>Select</option>
+                <option value="steak">Steak</option>
+                <option value="potato">Sweet potato</option>
+                <option value="chicken">Chicken</option>
+                <option value="pizza">Pizza</option>
+                <option value="candy">Candy</option>
+                <option value="candy">Candy</option>
+                <option value="cheese">Cheddar cheese</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="Form-item">
+            <div class="Checkbox Checkbox--default">
+              <input type="checkbox" id="vegetarianCheckbox" value="vegetarian" checked/>
+              <label for="vegetarianCheckbox">I am a vegetarian</label>
+            </div>
+          </div>
+          
+          <div class="u-marginTl">
+            <input type="submit" class="Button Button--default" value="Submit form">
+            <small class="u-inlineBlock u-marginHs u-alignMiddle">or</small>
+            <a href="#" class="Button">Cancel</a>
+          </div>
+  
+        </form>
+      </article><!-- /#form -->
+
+      <article class="u-paddingVm" id="spinner">
+        <h4 class="u-h4">Spinner</h4>
+        
+        <span class="Spinner Spinner--default Spinner--lg"></span>
+        <span class="Spinner Spinner--default u-marginHm"></span>
+        <span class="Spinner Spinner--default Spinner--sm"></span>
+      </article><!-- /#spinner -->
+    </div>
+    
+    <div class="u-paddingHm u-lg-wrap u-paddingTl">
+
+      <article class="u-paddingVm" id="grid">
+        <h4 class="u-h4">Grid</h4>
+
+        <div class="Grid Grid--withGutters md-Grid--3col Grid--demo">
+          <div class="Grid-cell">
+            <div class="u-paddingVs u-marginBm">Grid cell 1</div>
+          </div>
+          <div class="Grid-cell">
+            <div class="u-paddingVs u-marginBm">Grid cell 2</div>
+          </div>
+          <div class="Grid-cell">
+            <div class="u-paddingVs u-marginBm">Grid cell 3</div>
+          </div>
+        </div>
+   
+        <div class="Grid Grid--withGutters Grid--demo">
+          <div class="Grid-cell u-sm-size1of1 u-md-size1of4">
+            <div class="u-paddingVs u-marginBm">Grid cell 1</div>
+          </div>
+          <div class="Grid-cell u-sm-size1of2 u-md-size1of4">
+            <div class="u-paddingVs u-marginBm">Grid cell 2</div>
+          </div>
+          <div class="Grid-cell u-sm-size1of2 u-md-size1of4">
+            <div class="u-paddingVs u-marginBm">Grid cell 3</div>
+          </div>
+          <div class="Grid-cell u-sm-size1of1 u-md-size1of4">
+            <div class="u-paddingVs u-marginBm">Grid cell 4</div>
+          </div>
+        </div>
+
+        <div class="Grid Grid--alignCenter Grid--withGutters Grid--demo">
+          <div class="Grid-cell u-size2of6">
+            <div class="u-paddingVs u-marginBm">Grid cell 1</div>
+          </div>
+          <div class="Grid-cell u-size2of6">
+            <div class="u-paddingVs u-marginBm">Grid cell 2</div>
+          </div>
+        </div>
+
+        <div class="Grid Grid--3col Grid--withGutters Grid--alignMiddle Grid--demo">
+          <div class="Grid-cell">
+            <div class="u-paddingVl u-marginBm">Grid cell 1</div>
+          </div>
+          <div class="Grid-cell">
+            <div class="u-paddingVm u-marginBm">Grid cell 2</div>
+          </div>
+          <div class="Grid-cell">
+            <div class="u-paddingVs u-marginBm">Grid cell 3</div>
+          </div>
+        </div>
+
+        <div class="Grid Grid--demo">
+          <div class="Grid-cell u-size2of8 u-after6of8">
+            <div class="u-paddingVs">Grid cell 1</div>
+          </div>
+          <div class="Grid-cell u-size2of8 u-after4of8 u-before2of8">
+            <div class="u-paddingVs">Grid cell 2</div>
+          </div>
+          <div class="Grid-cell u-size2of8 u-after2of8 u-before4of8">
+            <div class="u-paddingVs">Grid cell 3</div>
+          </div>
+          <div class="Grid-cell u-size2of8 u-before6of8">
+            <div class="u-paddingVs">Grid cell 4</div>
+          </div>
+        </div>
+      </article><!-- /#grid -->
+
+    </div>
+
+    <div class="u-md-wrap u-paddingHm u-paddingVl">
+
+      <article class="u-paddingVm" id="table">
+        <h4 class="u-h4">Table</h4>
+
+        <table class="Table">
+          <caption>Table Example</caption>
+           
+          <thead>
+            <tr>
+              <th>Header 1</th><th>Header 2</th><th>Header 3</th>
+            </tr>
+          </thead>
+           
+          <tbody>
+            <tr>
+              <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+            </tr>
+            <tr>
+              <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+            </tr>
+            <tr>
+              <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+            </tr>
+          </tbody>
+       
+          <tfoot>
+            <tr>
+              <td colspan="3">Table Foot</td>
+            </tr>
+          </tfoot>  
+        </table>
+      </article><!-- /#table -->
+
+      <article class="u-paddingVm" id="typography">
+        <h4 class="u-h4">Typography</h4>
+        
+        <div class="u-formatedText">
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+          
+          <div class="u-paragraphsIndent">
+            <p>Lorem ipsum dolor sit amet, <a href="#typography" title="adipiscing elit">adipiscing elit</a>. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor.</p>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
+          </div>
+
+          <img src="http://lorempixel.com/760/380/nature/3" alt="">
+
+          <blockquote>
+            "Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem." <br>
+            — Aliquam Libero
+          </blockquote>
+
+          <ol>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Nullam dignissim convallis est</li>
+            <li>Praesent mattis</li>
+          </ol>
+
+          <p>Lorem ipsum dolor sit amet, <em>consectetuer adipiscing elit</em>. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+
+          <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Nullam dignissim convallis est</li>
+            <li>Praesent mattis</li>
+          </ul>
+        </div>
+
+      </article><!-- /#typography -->
+
+      <hr>
+      
+      <footer class="u-cf">
+        <small class="u-pullLeft">© 2014 Łukasz Wątroba. All rights reserved.</small>
+        <small class="u-pullRight"><a href="#">Back to top</a></small>
+      </footer>
+    
+    </div>
+
+    <a href="https://github.com/LukaszWatroba/valitycss"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+  </body>
+</html>

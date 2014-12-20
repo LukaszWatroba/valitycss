@@ -1,0 +1,57 @@
+// =====================================
+// Form
+// =====================================
+
+/**
+ * Example: horizontally arranged label-control pairs
+ * 
+  <form class="Form [Form--modifier]">
+    <div class="Form-item [Form-item--modifier]">
+      [content]
+    </div>
+  
+    <div class="Form-item [Form-item--modifier]">
+      [content]
+    </div>
+  </form>
+ */
+
+
+.Form {}
+
+.Form--inline .Form-item {
+  display: inline-block;
+  margin-right: $space-md;
+}
+
+.Form-item {
+  margin: 0 0 $space-md;
+}
+
+.Form-label {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.Form-legend {
+  display: block;
+  width: 100%;
+  margin-bottom: $space-md;
+  border: 0;
+}
+
+
+// -------------------------------------
+// Form item modifiers
+// -------------------------------------
+
+// Modifier: stacked form item
+// -------------------------------------
+
+.Form-item--stacked .Form-label,
+.Form-item--stacked > label {
+  display: block;
+  margin-bottom: 2px;
+  margin-right: 0;
+}
+

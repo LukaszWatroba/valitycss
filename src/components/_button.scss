@@ -1,0 +1,127 @@
+// =====================================
+// Button
+// =====================================
+
+
+/**
+ * Example HTML:
+ *
+  <a class="Button [Button--modifier]" role="button" href="[url]">Button text</a>
+  <button class="Button [Button--modifier]" type="submit">Button text</button>
+  <input class="Button [Button--modifier]" type="submit" value="Button text">
+ */
+
+
+.Button {
+  appearance: none;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+
+  font: inherit;
+  color: $link-color;
+
+  text-decoration: none;
+  user-select: none;
+  white-space: normal;
+  line-height: normal;
+
+  font-size: $font-size-md;
+
+  &:hover,
+  &:focus {
+    color: darken($link-color, 10%);
+    text-decoration: none;
+    outline: 0;
+  }
+
+  &:active,
+  &.is-active {
+    color: darken($link-color, 10%);
+    text-decoration: none;
+    outline: 0;
+    background-image: none;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: $disabled-opacity;
+  }
+}
+
+
+%Button--basic {
+  padding: $padding-v-md $padding-h-md; 
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: $border-radius-md;
+}
+
+
+// -------------------------------------
+// Button modifires
+// -------------------------------------
+
+// Modifier: default button
+// -------------------------------------
+
+.Button--default {
+  @extend %Button--basic;
+
+  background-color: $link-color;
+  border-color: $link-color;
+  color: $text-color-invert;
+  transition: background-color $duration-short, color $duration-short, border-color $duration-short;
+
+  &.Button--sm {
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing-md;
+    font-weight: $font-weight-bold;
+  }
+ 
+  &:hover,
+  &:focus,
+  &:active,
+  &.is-active {
+    border-color: lighten($link-color, $color-function-value);
+    background-color: lighten($link-color, $color-function-value);
+    color: $text-color-invert;
+  }
+}
+
+
+// Modifier: size large
+// -------------------------------------
+
+.Button--lg {
+  font-size: $font-size-lg;
+  padding-right: $padding-h-lg;
+  padding-left: $padding-h-lg;
+}
+
+
+// Modifier: size small
+// -------------------------------------
+
+.Button--sm {
+  font-size: $font-size-sm;
+}
+
+
+// Button fixes
+// -------------------------------------
+
+.Button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+

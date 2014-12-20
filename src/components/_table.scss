@@ -1,0 +1,160 @@
+// =====================================
+// Table
+// =====================================
+
+
+/**
+ * Example HTML:
+ *
+  <table class="Table [Table--condensed|Table--bordered]">
+    <caption>Table Example</caption>
+     
+    <thead>
+      <tr>
+        <th>Table Header 1</th><th>Table Header 2</th><th>Table Header 3</th>
+      </tr>
+    </thead>
+     
+    <tbody>
+      <tr>
+        <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+      </tr>
+      <tr>
+        <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+      </tr>
+      <tr>
+        <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+      </tr>
+    </tbody>
+ 
+    <tfoot>
+      <tr>
+        <td colspan="3">Table Foot</td>
+      </tr>
+    </tfoot>  
+  </table>
+ */
+
+
+.Table {
+  width: 100%;
+
+  thead,
+  tbody,
+  tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: $padding-v-lg $padding-v-lg;
+        line-height: normal;
+        vertical-align: middle;
+        border-top: $table-border;
+      }
+    }
+  }
+
+  thead > tr > th {
+    vertical-align: middle;
+    border-bottom: $table-border;
+  }
+  
+  caption {
+    padding: $padding-v-lg $padding-v-lg;
+  }
+
+  caption + thead,
+  colgroup + thead,thead:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top: 0;
+      }
+    }
+  }
+
+  thead > tr > th {
+    vertical-align: middle;
+    border-bottom: $table-border;
+  }
+
+  tbody + tbody {
+    border-top: $table-border;
+  }
+}
+
+
+// -------------------------------------
+// Table modifires
+// -------------------------------------
+
+// Modifier: condensed table
+// -------------------------------------
+
+.Table--condensed {
+  caption {
+    padding: $padding-v-md $padding-v-md;
+  }
+  
+  thead,
+  tbody,
+  tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: $padding-v-md $padding-v-md;
+      }
+    }
+  }
+}
+
+
+// Modifier: bordered table
+// -------------------------------------
+
+.Table--bordered {
+  border: $table-border;
+
+  thead,
+  tbody,
+  tfoot {
+    > tr {
+      > th,
+      > td {
+        border: $table-border;
+      }
+    }
+  }
+}
+
+
+// Modifier: striped table
+// -------------------------------------
+
+.Table--striped {
+  tbody > tr:nth-child(odd) {
+    > td,
+    > th {
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+  }
+}
+
+
+// Modifier: hover table
+// -------------------------------------
+
+.Table--hover {
+  tbody > tr {
+    > td,
+    > th {
+      transition: background-color $duration-medium;
+    }
+  }
+
+  tbody > tr:hover {
+    > td,
+    > th {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+}

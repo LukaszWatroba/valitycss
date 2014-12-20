@@ -1,0 +1,182 @@
+// =====================================
+// Multiple (radio & checkbox)
+// =====================================
+
+
+/**
+ * Example: radio button
+ * 
+  <div class="Radio [Radio--modifier]">
+    <input type="radio" id="…" value="…" />
+    <label for="…">Radio label</label>
+  </div>
+ */
+
+/**
+ * Example: checkbox 
+ * 
+  <div class="Checkbox [Checkbox--modifier]">
+    <input type="checkbox" id="…" value="…" />
+    <label for="…">Checkbox label</label>
+  </div>
+*/
+
+
+%Multiple {
+  user-select: none;
+  
+  > label {
+    display: inline-block;
+    position: relative;
+    line-height: $input-multiple-size;
+    cursor: pointer;
+
+    padding-left: $input-multiple-size + 10px;
+  }
+
+  > input[type=radio],
+  > input[type=checkbox] {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    line-height: normal;
+  }
+
+  > label::before {
+    content: '';
+    display: inline-block;
+    box-sizing: border-box;
+
+    width: $input-multiple-size;
+    height: $input-multiple-size;
+    
+    line-height: $input-multiple-size - 2px;
+    text-align: center;
+    border: 1px solid transparent;
+
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -($input-multiple-size / 2);
+  }
+}
+
+
+// -------------------------------------
+// Radio
+// -------------------------------------
+
+.Radio {
+  @extend %Multiple;
+  
+  > label::before {
+    border-radius: 50%;
+  }
+
+  > input[type=radio] + label:before {
+    font-size: 32px;
+  }
+
+  > input[type=radio]:checked + label:before {
+    background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" enable-background="new 0 0 18 18" xml:space="preserve"><circle fill="#FFFFFF" cx="9" cy="9" r="4"/></svg>')
+  }
+
+  > input[type=radio]:disabled + label,
+  > input[type=radio].is-disabled + label {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: $disabled-opacity;
+  }
+}
+
+
+// -------------------------------------
+// Radio modifiers
+// -------------------------------------
+
+// Modifier: default radio
+// -------------------------------------
+
+.Radio--default {
+  > label::before {
+    background-color: $gray-light;
+    border-color: $gray-light;
+    color: $text-color;
+    transition: all $duration-short;
+  }
+
+  > label:hover::before,
+  > input:focus + label::before,
+  > input:active + label::before, {
+    border-color: lighten($gray-light, $color-function-value);
+    background-color: lighten($gray-light, $color-function-value);
+  }
+
+  > input[type=radio]:checked + label:before {
+    border-color: $brand-success;
+    background-color: $brand-success;
+    color: $text-color-invert;
+  }
+}
+
+
+// -------------------------------------
+// Checkbox
+// -------------------------------------
+
+.Checkbox {
+  @extend %Multiple;
+
+  > label::before {
+    border-radius: $border-radius-sm;
+  }
+
+  > input[type=checkbox]:checked + label:before {
+    background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" enable-background="new 0 0 18 18" xml:space="preserve"><polygon fill="#FFFFFF" points="13.1,4.3 7.4,10 4.9,7.5 3,9.4 7.4,13.7 15,6.1 "/></svg>');
+  }
+
+  > input[type=checkbox]:disabled + label,
+  > input[type=checkbox].is-disabled + label {
+    cursor: default;
+    pointer-events: none;
+    opacity: $disabled-opacity;
+  }
+}
+
+
+// -------------------------------------
+// Checkbox modifiers
+// -------------------------------------
+
+// Modifier: default checkbox
+// -------------------------------------
+
+.Checkbox--default {
+  > label::before {
+    background-color: $gray-light;
+    border-color: $gray-light;
+    color: $text-color;
+    transition: all $duration-short;
+  }
+
+  > label:hover::before,
+  > input:focus + label::before,
+  > input:active + label::before, {
+    border-color: lighten($gray-light, $color-function-value);
+    background-color: lighten($gray-light, $color-function-value);
+  }
+
+  > input[type=checkbox]:checked + label:before {
+    border-color: $brand-success;
+    background-color: $brand-success;
+    color: $text-color-invert;
+  }
+}
+
