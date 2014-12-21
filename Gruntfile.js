@@ -12,7 +12,7 @@ module.exports = function (grunt) {
   };
 
   var banner = '/*!\n'
-          + ' * ValityCss v0.0.1 (http://lukaszwatroba.github.io/valitycss)\n'
+          + ' * ValityCss v0.0.2 (http://lukaszwatroba.github.io/valitycss)\n'
           + ' * Created by Łukasz Wątroba (http://lukaszwatroba.com)\n'
           + ' * Licensed under MIT (https://github.com/LukaszWatroba/valitycss/blob/master/LICENSE)\n'
           + ' */\n\n';

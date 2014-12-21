@@ -1,6 +1,6 @@
 {
   "name": "valitycss",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Minimalist, responsive and extensible framework build based on OOCSS and BEM principles.",
   "homepage": "http://lukaszwatroba.github.io/valitycss",
   "authors": [
