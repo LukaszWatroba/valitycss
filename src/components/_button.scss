@@ -90,10 +90,15 @@
  
   &:hover,
   &:focus,
-  &:active,
-  &.is-active {
+  &:active {
     border-color: lighten($link-color, $color-function-value);
     background-color: lighten($link-color, $color-function-value);
+    color: $text-color-invert;
+  }
+
+  &.is-active {
+    background-color: darken($link-color, $color-function-value);
+    border-color: darken($link-color, $color-function-value);
     color: $text-color-invert;
   }
 }

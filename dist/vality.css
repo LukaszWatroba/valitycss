@@ -1114,9 +1114,14 @@ hr {
   letter-spacing: 0.075em;
   font-weight: 700;
 }
-.Button--default:hover, .Button--default:focus, .Button--default:active, .Button--default.is-active {
+.Button--default:hover, .Button--default:focus, .Button--default:active {
   border-color: #3ea4f5;
   background-color: #3ea4f5;
+  color: white;
+}
+.Button--default.is-active {
+  background-color: #0d87e9;
+  border-color: #0d87e9;
   color: white;
 }
 
