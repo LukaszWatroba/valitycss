@@ -49,11 +49,18 @@
   background-color: #fff;
   color: inherit;
   border-radius: $border-radius-sm;
-  transition: border-color $duration-short;
-  box-shadow:inset 0px 1px 1px rgba(0,0,0, 0.1);
+  box-shadow: inset 0px 1px 1px rgba(0,0,0, 0.1);
+
+  transition: border-color $duration-short, box-shadow $duration-short;
 
   &:focus {
     border-color: $brand-info;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0, 0);
+  }
+
+  &:invalid,
+  &.is-invalid {
+    border-color: $brand-error;
   }
 }
 
