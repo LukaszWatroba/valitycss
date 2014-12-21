@@ -904,7 +904,7 @@ hr {
   font-size: 32px;
 }
 .Radio > input[type=radio]:checked + label:before {
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" enable-background="new 0 0 18 18" xml:space="preserve"><circle fill="#FFFFFF" cx="9" cy="9" r="4"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><circle fill="%23FFFFFF" cx="9" cy="9" r="4"/></svg>');
 }
 .Radio > input[type=radio]:disabled + label,
 .Radio > input[type=radio].is-disabled + label {
@@ -935,7 +935,7 @@ hr {
   border-radius: 2px;
 }
 .Checkbox > input[type=checkbox]:checked + label:before {
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" enable-background="new 0 0 18 18" xml:space="preserve"><polygon fill="#FFFFFF" points="13.1,4.3 7.4,10 4.9,7.5 3,9.4 7.4,13.7 15,6.1 "/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><polygon fill="%23FFFFFF" points="13.1,4.3 7.4,10 4.9,7.5 3,9.4 7.4,13.7 15,6.1 "/></svg>');
 }
 .Checkbox > input[type=checkbox]:disabled + label,
 .Checkbox > input[type=checkbox].is-disabled + label {
@@ -986,13 +986,12 @@ hr {
   vertical-align: middle;
 }
 .Select::before, .Select::after {
-  content: "";
+  content: '';
   position: absolute;
   pointer-events: none;
 }
 .Select::after {
-  font-family: 'Arial';
-  content: ' ';
+  content: '';
   height: 18px;
   width: 18px;
   line-height: 1.2em;
@@ -1000,7 +999,7 @@ hr {
   top: 50%;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" enable-background="new 0 0 18 18" xml:space="preserve"><polygon fill="#212121" points="12,7 9,12.2 6,7 "/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><polygon fill="%23212121" points="12,7 9,12.2 6,7 "/></svg>');
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -1010,13 +1009,14 @@ hr {
   top: 0;
   bottom: 0;
 }
-.Select.is-disabled {
+.Select:disabled, .Select.is-disabled {
   cursor: default;
   pointer-events: none;
   opacity: 0.6;
 }
 
 .Select > select {
+  -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
   background-color: transparent;
@@ -1033,7 +1033,7 @@ hr {
 
 .Select--default::before {
   border-radius: 0 4px 4px 0;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #c9c9c9;
 }
 .Select--default > select {
   border-radius: 4px;
@@ -1042,7 +1042,7 @@ hr {
   color: #212121;
   transition: all 0.5s;
 }
-.Select--default > select:hover, .Select--default > select:active, .Select--default > select.is-active, .Select--default > select:focus {
+.Select--default > select:hover, .Select--default > select:active, .Select--default > select:focus {
   background-color: #e7e7e7;
   border-color: #e7e7e7;
 }

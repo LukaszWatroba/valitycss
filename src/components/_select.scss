@@ -30,21 +30,20 @@
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     pointer-events: none;
   }
 
   &::after {
-    font-family: 'Arial';
-    content: ' ';
+    content: '';
     height: 18px;
     width: 18px;
     line-height: 1.2em;
     right: 15px;
     top: 50%;
     transform: translate(50%, -50%);
-    background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" enable-background="new 0 0 18 18" xml:space="preserve"><polygon fill="#212121" points="12,7 9,12.2 6,7 "/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><polygon fill="%23212121" points="12,7 9,12.2 6,7 "/></svg>');
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
@@ -56,6 +55,7 @@
     bottom: 0;
   }
   
+  &:disabled,
   &.is-disabled {
     cursor: default;
     pointer-events: none;
@@ -64,6 +64,7 @@
 }
 
 .Select > select {
+  -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
   background-color: transparent;
@@ -91,7 +92,7 @@
 .Select--default {
   &::before { 
     border-radius: 0 $border-radius-md $border-radius-md 0;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: darken($gray-light, $color-function-value);
   }
 
   > select {
@@ -103,7 +104,6 @@
 
     &:hover,
     &:active,
-    &.is-active,
     &:focus {
       background-color: lighten($gray-light, $color-function-value);
       border-color: lighten($gray-light, $color-function-value);

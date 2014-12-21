@@ -85,7 +85,7 @@
   }
 
   > input[type=radio]:checked + label:before {
-    background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" enable-background="new 0 0 18 18" xml:space="preserve"><circle fill="#FFFFFF" cx="9" cy="9" r="4"/></svg>')
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><circle fill="%23FFFFFF" cx="9" cy="9" r="4"/></svg>')
   }
 
   > input[type=radio]:disabled + label,
@@ -139,7 +139,7 @@
   }
 
   > input[type=checkbox]:checked + label:before {
-    background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" enable-background="new 0 0 18 18" xml:space="preserve"><polygon fill="#FFFFFF" points="13.1,4.3 7.4,10 4.9,7.5 3,9.4 7.4,13.7 15,6.1 "/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><polygon fill="%23FFFFFF" points="13.1,4.3 7.4,10 4.9,7.5 3,9.4 7.4,13.7 15,6.1 "/></svg>');
   }
 
   > input[type=checkbox]:disabled + label,
