@@ -725,6 +725,7 @@ hr {
   color: inherit;
   border-radius: 2px;
   transition: border-color 0.25s;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
 }
 .Input--default:focus {
   border-color: #2196f3;
