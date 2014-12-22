@@ -1,5 +1,20 @@
+._*
+.~lock.*
+.buildpath
 .DS_Store
-bower_components
-node_modules
+.idea
 .sass-cache
+
+# Ignore node stuff
+node_modules/
+npm-debug.log
+libpeerconnection.log
+
+# OS-specific
+.DS_Store
+
+# Bower components
+bower_components
+
+# Sublime
 *.sublime-*
