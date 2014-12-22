@@ -1,7 +1,7 @@
 {
   "name": "valitycss",
   "version": "0.0.3",
-  "description": "Minimalist, responsive and extensible framework build based on OOCSS and BEM principles.",
+  "description": "ValityCss - Minimalist, responsive and extensible framework build based on OOCSS and BEM principles.",
   "repository": {
     "type": "git",
     "url": "https://github.com/LukaszWatroba/valitycss.git"
