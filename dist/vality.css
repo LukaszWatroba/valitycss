@@ -1,9 +1,10 @@
-/*!
- * ValityCss v0.0.3 (http://lukaszwatroba.github.io/valitycss)
- * Created by Łukasz Wątroba (http://lukaszwatroba.com)
- * Licensed under MIT (https://github.com/LukaszWatroba/valitycss/blob/master/LICENSE)
+/**
+ * ValityCss - Minimalist, responsive and extensible framework build based on OOCSS and BEM principles.
+ * @version v0.0.3 - 2014-12-22
+ * @link http://lukaszwatroba.github.io/valitycss
+ * @author Łukasz Wątroba <l@lukaszwatroba.com>
+ * @license MIT License, http://www.opensource.org/licenses/MIT
  */
-
 
 @charset "UTF-8";
 html {
