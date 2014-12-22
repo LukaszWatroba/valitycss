@@ -3,7 +3,7 @@ ValityCss
 
 Minimalist, responsive and extensible framework build based on OOCSS and BEM principles.
 
-[Demos](http://lukaszwatroba.github.io/valitycss)
+[Demo](http://lukaszwatroba.github.io/valitycss)
 
 
 ## Core
