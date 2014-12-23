@@ -50,6 +50,16 @@
 }
 
 
+// Font kerning
+// -------------------------------------
+
+.u-textKern {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'kern' 1;
+  font-kerning: normal;
+}
+
+
 // Text truncation
 // -------------------------------------
 

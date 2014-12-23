@@ -1,0 +1,44 @@
+// =====================================
+// Link 
+// =====================================
+
+
+/**
+ * Complex link example HTML:
+ *
+  <a class="u-linkComplex" href="#">
+    Link complex
+    <span class="u-linkComplexTarget">target</span>
+  </a>
+ */
+
+
+.u-linkClean,
+.u-linkClean:hover,
+.u-linkClean:focus,
+.u-linkClean:active {
+  text-decoration: none !important;
+}
+
+.u-linkComplex,
+.u-linkComplex:hover,
+.u-linkComplex:focus,
+.u-linkComplex:active {
+  text-decoration: none !important;
+}
+
+.u-linkComplex:hover,
+.u-linkComplex:focus,
+.u-linkComplex:active {
+  &.u-linkComplexTarget {
+    text-decoration: underline !important;
+  }
+}
+
+.u-linkBlock,
+.u-linkBlock:hover,
+.u-linkBlock:focus,
+.u-linkBlock:active {
+  display: block !important;
+  text-decoration: none !important;
+}

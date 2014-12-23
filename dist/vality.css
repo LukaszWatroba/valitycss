@@ -1,6 +1,6 @@
 /**
  * ValityCss - Minimalist, responsive and extensible framework build based on OOCSS and BEM principles.
- * @version v0.0.3 - 2014-12-22
+ * @version v0.0.4 - 2014-12-23
  * @link http://lukaszwatroba.github.io/valitycss
  * @author Łukasz Wątroba <l@lukaszwatroba.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -1459,16 +1459,31 @@ hr {
   border-width: 1px;
 }
 
+.u-block {
+  display: block;
+}
+
+.u-hidden {
+  display: none;
+}
+
+.u-hiddenVisually {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 .u-inline {
   display: inline;
 }
 
 .u-inlineBlock {
   display: inline-block;
-}
-
-.u-block {
-  display: block;
+  max-width: 100%;
 }
 
 .u-table {
@@ -1477,6 +1492,10 @@ hr {
 
 .u-tableCell {
   display: table-cell;
+}
+
+.u-tableRow {
+  display: table-row;
 }
 
 .u-pullLeft {
@@ -1499,20 +1518,19 @@ hr {
   overflow: hidden;
 }
 
-.u-wrap,
-.u-lg-wrap {
-  display: block;
-  max-width: 64em;
-  margin: 0 auto;
-}
-
-.u-md-wrap {
+.u-wrapper {
   display: block;
   max-width: 48em;
   margin: 0 auto;
 }
 
-.u-sm-wrap {
+.u-wideWrapper {
+  display: block;
+  max-width: 64em;
+  margin: 0 auto;
+}
+
+.u-narrowWrapper {
   display: block;
   max-width: 20em;
   margin: 0 auto;
@@ -3445,6 +3463,16 @@ th.u-isShown {
 
 .u-textNoWrap {
   white-space: nowrap;
+}
+
+.u-textKern {
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: 'kern' 1;
+     -moz-font-feature-settings: 'kern' 1;
+          font-feature-settings: 'kern' 1;
+  -webkit-font-kerning: normal;
+     -moz-font-kerning: normal;
+          font-kerning: normal;
 }
 
 .u-textTruncate {

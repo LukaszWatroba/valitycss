@@ -34,20 +34,19 @@
 // Wrapper
 // -------------------------------------
 
-.u-wrap,
-.u-lg-wrap {
-  display: block;
-  max-width: $screen-lg;
-  margin: 0 auto;
-}
-
-.u-md-wrap {
+.u-wrapper {
   display: block;
   max-width: $screen-md;
   margin: 0 auto;
 }
 
-.u-sm-wrap {
+.u-wideWrapper {
+  display: block;
+  max-width: $screen-lg;
+  margin: 0 auto;
+}
+
+.u-narrowWrapper {
   display: block;
   max-width: $screen-sm;
   margin: 0 auto;

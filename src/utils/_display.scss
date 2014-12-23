@@ -2,16 +2,31 @@
 // Display
 // =====================================
 
+.u-block {
+  display: block;
+}
+
+.u-hidden {
+  display: none;
+}
+
+.u-hiddenVisually {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 .u-inline {
   display: inline;
 }
 
 .u-inlineBlock {
   display: inline-block;
-}
-
-.u-block {
-  display: block;
+  max-width: 100%;
 }
 
 .u-table {
@@ -20,4 +35,8 @@
 
 .u-tableCell {
   display: table-cell;
+}
+
+.u-tableRow {
+  display: table-row;
 }
