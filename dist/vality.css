@@ -1,6 +1,6 @@
 /**
  * ValityCss - Minimalist, responsive and extensible framework build based on OOCSS and BEM principles.
- * @version v0.0.4 - 2014-12-23
+ * @version v0.0.5 - 2014-12-26
  * @link http://lukaszwatroba.github.io/valitycss
  * @author Łukasz Wątroba <l@lukaszwatroba.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -583,11 +583,11 @@ hr {
   }
 }
 .Grid--withGutters {
-  margin: 0 -10px;
+  margin: 0 -15px;
 }
 
 .Grid--withGutters > .Grid-cell {
-  padding: 0 10px;
+  padding: 0 15px;
 }
 
 /**

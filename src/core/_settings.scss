@@ -122,9 +122,9 @@ $duration-long:         $duration-medium * 2 !default;
 // Grid
 // -------------------------------------
 
-$grid-gutter-md:        $space-sm !default;
-$grid-gutter-sm:        $space-sm / 2 !default;
-$grid-gutter-lg:        $space-md !default;
+$grid-gutter-md:        15px !default;
+$grid-gutter-sm:        $grid-gutter-md / 2 !default;
+$grid-gutter-lg:        $grid-gutter-md * 2 !default;
 
 
 // Arrange
