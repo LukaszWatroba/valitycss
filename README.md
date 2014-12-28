@@ -80,7 +80,7 @@ _button.scss
 </div>
 ```
 ```html
-<div class="Grid [Grid--alignCenter | Grid--alignRight]">
+<div class="Grid [Grid--alignCenter|Grid--alignRight]">
   <div class="Grid-cell u-size2of8">[content]</div>
   <div class="Grid-cell u-size2of8">[content]</div>
   <div class="Grid-cell u-size2of8">[content]</div>
