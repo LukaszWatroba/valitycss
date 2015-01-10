@@ -221,7 +221,6 @@ _table.scss
 
 ## Utils
 - _align.scss
-- _animations.scss
 - _display.scss
 - _layout.scss
 - _link.scss
