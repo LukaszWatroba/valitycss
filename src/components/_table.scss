@@ -1,6 +1,6 @@
-// =====================================
-// Table
-// =====================================
+/***************************************
+  Table
+ ***************************************/
 
 
 /**
@@ -83,12 +83,11 @@
 }
 
 
-// -------------------------------------
-// Table modifires
-// -------------------------------------
 
-// Modifier: condensed table
-// -------------------------------------
+/* Table modifires
+ ***************************************/
+
+/* Modifier: condensed table */
 
 .Table--condensed {
   caption {
@@ -108,8 +107,7 @@
 }
 
 
-// Modifier: bordered table
-// -------------------------------------
+/* Modifier: bordered table */
 
 .Table--bordered {
   border: $table-border;
@@ -127,8 +125,7 @@
 }
 
 
-// Modifier: striped table
-// -------------------------------------
+/* Modifier: striped table */
 
 .Table--striped {
   tbody > tr:nth-child(odd) {
@@ -140,8 +137,7 @@
 }
 
 
-// Modifier: hover table
-// -------------------------------------
+/* Modifier: hover table */
 
 .Table--hover {
   tbody > tr {

@@ -1,6 +1,6 @@
-// =====================================
-// Spinner
-// =====================================
+/***************************************
+  Spinner
+ ***************************************/
 
 
 /**
@@ -31,20 +31,18 @@
 }
 
 
-// -------------------------------------
-// Spinner modifiers
-// -------------------------------------
 
-// Modifier: default spinner
-// -------------------------------------
+/* Spinner modifiers
+ ***************************************/
+
+/* Modifier: default spinner */
 
 .Spinner--default {
   border-top-color: $brand-success;
   border-left-color: $brand-success;
 }
 
-// Modifier: large spinner
-// -------------------------------------
+/* Modifier: large spinner */
 
 .Spinner--lg {
   width: 22px;
@@ -52,8 +50,7 @@
   border-width: 3px;
 }
 
-// Modifier: small spinner
-// -------------------------------------
+/* Modifier: small spinner */
 
 .Spinner--sm {
   width: 11px;

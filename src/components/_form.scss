@@ -1,6 +1,7 @@
-// =====================================
-// Form
-// =====================================
+/***************************************
+  Form
+ ***************************************/
+
 
 /**
  * Example: horizontally arranged label-control pairs
@@ -41,12 +42,11 @@
 }
 
 
-// -------------------------------------
-// Form item modifiers
-// -------------------------------------
 
-// Modifier: stacked form item
-// -------------------------------------
+/* Form item modifiers
+ ***************************************/
+
+/* Modifier: stacked form item */
 
 .Form-item--stacked .Form-label,
 .Form-item--stacked > label {

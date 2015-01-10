@@ -1,26 +1,25 @@
-// =====================================
-// Space 
-// =====================================
+/***************************************
+  Space
+ ***************************************/
 
 
 /**
- * A = all
- * T = top
- * R = right
- * B = bottom
- * L = left
- * H = horizontal
- * V = vertical
- *
- * n = none
- * s = small
- * m = medium
- * l = large
+  A = all
+  T = top
+  R = right
+  B = bottom
+  L = left
+  H = horizontal
+  V = vertical
+ 
+  n = none
+  s = small
+  m = medium
+  l = large
  */
 
 
-// All
-// -------------------------------------
+/* All */
 
 .u-paddingAn { padding: 0; }
 .u-paddingAs { padding: $space-sm; }
@@ -33,8 +32,7 @@
 .u-marginAl { margin: $space-lg; }
 
 
-// Vertical
-// -------------------------------------
+/* Vertical */
 
 .u-paddingVn { padding-top: 0; padding-bottom: 0; }
 .u-paddingVs { padding-top: $space-sm; padding-bottom: $space-sm; }
@@ -47,8 +45,7 @@
 .u-marginVl { margin-top: $space-lg; margin-bottom: $space-lg; }
 
 
-// Horizontal
-// -------------------------------------
+/* Horizontal */
 
 .u-paddingHn { padding-left: 0; padding-right: 0; }
 .u-paddingHs { padding-left: $space-sm; padding-right: $space-sm; }
@@ -61,8 +58,7 @@
 .u-marginHl { margin-left: $space-lg; margin-right: $space-lg; }
 
 
-// Top
-// -------------------------------------
+/* Top */
 
 .u-paddingTn { padding-top: 0; }
 .u-paddingTs { padding-top: $space-sm; }
@@ -75,8 +71,7 @@
 .u-marginTl { margin-top: $space-lg; }
 
 
-// Bottom
-// -------------------------------------
+/* Bottom */
 
 .u-paddingBn { padding-bottom: 0; }
 .u-paddingBs { padding-bottom: $space-sm; }
@@ -89,8 +84,7 @@
 .u-marginBl { margin-bottom: $space-lg; }
 
 
-// Left
-// -------------------------------------
+/* Left */
 
 .u-paddingLn { padding-left: 0; }
 .u-paddingLs { padding-left: $space-sm; }
@@ -103,8 +97,7 @@
 .u-marginLl { margin-left: $space-lg; }
 
 
-// Right
-// -------------------------------------
+/* Right */
 
 .u-paddingRn { padding-right: 0; }
 .u-paddingRs { padding-right: $space-sm; }

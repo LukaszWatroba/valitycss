@@ -1,17 +1,15 @@
-// =====================================
-// Text 
-// =====================================
+/***************************************
+  Text
+ ***************************************/
 
 
-// Word breaking
-// -------------------------------------
+/* Word breaking */
 .u-textBreak {
   word-wrap: break-word;
 }
 
 
-// Alligment
-// -------------------------------------
+/* Alligment */
 
 .u-textCenter {
   text-align: center;
@@ -26,32 +24,28 @@
 }
 
 
-// Inherit color 
-// -------------------------------------
+/* Inherit color  */
 
 .u-textInheritColor {
   color: inherit;
 }
 
 
-// Invert color 
-// -------------------------------------
+/* Invert color  */
 
 .u-textInvertColor {
   color: $text-color-invert;
 }
 
 
-// Whitespace wrapping 
-// -------------------------------------
+/* Whitespace wrapping  */
 
 .u-textNoWrap {
   white-space: nowrap;
 }
 
 
-// Font kerning
-// -------------------------------------
+/* Font kerning */
 
 .u-textKern {
   text-rendering: optimizeLegibility;
@@ -60,8 +54,7 @@
 }
 
 
-// Text truncation
-// -------------------------------------
+/* Text truncation */
 
 .u-textTruncate {
   max-width: 100%;

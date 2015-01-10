@@ -1,6 +1,7 @@
-// =====================================
-// Base
-// =====================================
+/***************************************
+  Base
+ ***************************************/
+
 
 *,
 *:after,
@@ -28,7 +29,7 @@ body {
 }
 
 body, button, select, textarea, input {
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: $font-smoothing;
 }
 
 a {
@@ -68,8 +69,8 @@ iframe {
 }
 
 
-// Forms
-// -------------------------------------
+
+/* Base: Forms */
 
 fieldset {
   border: 0;
@@ -149,8 +150,8 @@ output {
 }
 
 
-// Tables
-// -------------------------------------
+
+/* Base: Tables */
 
 table {
   max-width: 100%;
@@ -161,8 +162,8 @@ th {
 }
 
 
-// Headings
-// -------------------------------------
+
+/* Base: Headings */
 
 h1, 
 h2, 
@@ -199,8 +200,8 @@ h6 {
 }
 
 
-// Paragraphs
-// -------------------------------------
+
+/* Base: Paragraphs */
 
 p {}
 
@@ -218,8 +219,8 @@ em {
 }
 
 
-// Code
-// -------------------------------------
+
+/* Base: Code */
 
 code,
 pre {
@@ -227,8 +228,8 @@ pre {
 }
 
 
-// Quotes
-// -------------------------------------
+
+/* Base: Quotes */
 
 blockquote {
   font-style: italic;
@@ -236,8 +237,8 @@ blockquote {
 }
 
 
-// Lists
-// -------------------------------------
+
+/* Base: Lists */
 
 ol,
 ul {
@@ -247,8 +248,8 @@ ul {
 }
 
 
-// Horizontal rules
-// -------------------------------------
+
+/* Base: Horizontal rules */
 
 hr {
   margin: $space-md 0;

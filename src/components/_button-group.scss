@@ -1,6 +1,6 @@
-// =====================================
-// Button group
-// =====================================
+/***************************************
+  Button group
+ ***************************************/
 
 
 /**
@@ -43,20 +43,18 @@
 }
 
 
-// -------------------------------------
-// Button group modifires
-// -------------------------------------
 
-// Modifier: horizontal buttons
-// -------------------------------------
+/* Button group modifires
+ ***************************************/
+
+/* Modifier: horizontal buttons */
 
 .ButtonGroup--hz > .ButtonGroup-item {
   display: inline-block;
 }
 
 
-// Modifier: horizontal collapse
-// -------------------------------------
+/* Modifier: horizontal collapse */
 
 .ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item {
   margin-top: -1px;
@@ -81,8 +79,7 @@
 }
 
 
-// Modifier: horizontal collapse
-// -------------------------------------
+/* Modifier: horizontal collapse */
 
 .ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item {
   margin-left: -1px;

@@ -1,6 +1,6 @@
-// =====================================
-// Input group
-// =====================================
+/***************************************
+  Input group
+ ***************************************/
 
 
 /**
@@ -40,8 +40,7 @@
 }
 
 
-// Input group item
-// -------------------------------------
+/* Input group item */
 
 .InputGroup-item {
   display: table-cell;
@@ -62,8 +61,7 @@
 .InputGroup-item--fit {}
 
 
-// Input group addon
-// -------------------------------------
+/* Input group addon */
 
 .InputGroup-addon {
   box-sizing: border-box;
@@ -78,28 +76,25 @@
 }
 
 
-// -------------------------------------
-// Input group modifires
-// -------------------------------------
 
-// Modifier: size large
-// -------------------------------------
+/* Input group modifires
+ ***************************************/
+
+/* Modifier: size large */
 
 .InputGroup--lg {
   font-size: $font-size-lg;
 }
 
 
-// Modifier: size small
-// -------------------------------------
+/* Modifier: size small */
 
 .InputGroup--sm {
   font-size: $font-size-sm;
 }
 
 
-// Modifier: collapse borders
-// -------------------------------------
+/* Modifier: collapse borders */
 
 .InputGroup--borderCollapse .InputGroup-item:not(:first-child):not(:last-child) > .Input,
 .InputGroup--borderCollapse .InputGroup-item:not(:first-child):not(:last-child) > .Button

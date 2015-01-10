@@ -1,6 +1,6 @@
-// =====================================
-// Responsive
-// =====================================
+/***************************************
+  Responsive
+ ***************************************/
 
 
 .u-responsiveImage {
@@ -10,8 +10,7 @@
 }
 
 
-// Responsive: breakpoint 1
-// -------------------------------------
+/* Responsive: breakpoint 1 */
 
 @media (min-width: $screen-sm) {
   .u-sm-isHidden {
@@ -40,8 +39,7 @@
 }
 
 
-// Responsive: breakpoint 2
-// -------------------------------------
+/* Responsive: breakpoint 2 */
 
 @media (min-width: $screen-md) {
   .u-md-isHidden {
@@ -70,8 +68,7 @@
 }
 
 
-// Responsive: breakpoint 3
-// -------------------------------------
+/* Responsive: breakpoint 3 */
 
 @media (min-width: $screen-lg) {
   .u-lg-isHidden {
@@ -100,8 +97,7 @@
 }
 
 
-// Responsive: print
-// -------------------------------------
+/* Responsive: print */
 
 @media print {
   .u-print-isHidden {

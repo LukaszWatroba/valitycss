@@ -1,17 +1,12 @@
-// =====================================
-// Helpers
-// =====================================
-
-
 // -------------------------------------
-// Mixins
+// Settings
 // -------------------------------------
 
 
-@mixin clearfix() {
+@mixin clearfix () {
   &:before,
   &:after {
-    content: " ";
+    content: ' ';
     display: table;
   }
   &:after {
@@ -19,16 +14,17 @@
   }
 }
 
-@mixin size($width, $height) {
+
+@mixin size ($width, $height) {
   width: $width;
   height: $height;
 }
-
-@mixin square($size) {
+@mixin square ($size) {
   @include size($size, $size);
 }
 
-@mixin placeholder($color: $input-color-placeholder) {
+
+@mixin placeholder ($color: $input-color-placeholder) {
   &:-moz-placeholder            { color: $color; }
   &::-moz-placeholder           { color: $color; }
   &:-ms-input-placeholder       { color: $color; }
@@ -36,10 +32,8 @@
 }
 
 
-// CSS3 Properties
-// -------------------------------------
-
 // Border radius
+
 @mixin border-top-radius($radius) {
   border-top-right-radius: $radius;
   border-top-left-radius: $radius;
@@ -56,105 +50,3 @@
   border-bottom-left-radius: $radius;
   border-top-left-radius: $radius;
 }
-
-// Transformations
-@mixin rotate($degrees) {
-  transform: rotate($degrees);
-}
-@mixin scale($ratio) {
-  transform: scale($ratio);
-}
-@mixin translate($x, $y) {
-  transform: translate($x, $y);
-}
-@mixin skew($x, $y) {
-  transform: skew($x, $y);
-}
-@mixin translate3d($x, $y, $z) {
-  transform: translate3d($x, $y, $z);
-}
-
-@mixin rotateX($degrees) {
-  transform: rotateX($degrees);
-}
-@mixin rotateY($degrees) {
-  transform: rotateY($degrees);
-}
-
-
-// Gradients
-// -------------------------------------
-
-@mixin gradient-horizontal($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
-  background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent); // Standard, IE10
-  background-repeat: repeat-x;
-}
-
-@mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
-  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10
-  background-repeat: repeat-x;
-}
-
-@mixin gradient-directional($start-color: #555, $end-color: #333, $deg: 45deg) {
-  background-image: linear-gradient($deg, $start-color, $end-color);
-}
-@mixin gradient-horizontal-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
-  background-image: linear-gradient(to right, $start-color, $mid-color $color-stop, $end-color);
-  background-repeat: no-repeat;
-}
-@mixin gradient-vertical-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
-  background-image: linear-gradient($start-color, $mid-color $color-stop, $end-color);
-  background-repeat: no-repeat;
-}
-@mixin gradient-radial($inner-color: #555, $outer-color: #333) {
-  background-image: radial-gradient(circle, $inner-color, $outer-color);
-  background-repeat: no-repeat;
-}
-@mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {
-  background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
-}
-
-
-// Images
-// -------------------------------------
-
-// Retina
-@mixin img-retina($file-1x, $file-2x, $width-1x, $height-1x) {
-  background-image: image-url("#{$file-1x}");
-
-  @media
-  only screen and ( min-device-pixel-ratio: 2),
-  only screen and ( min-resolution: 192dpi),
-  only screen and ( min-resolution: 2dppx) {
-    background-image: image-url("#{$file-2x}");
-    background-size: $width-1x $height-1x;
-  }
-}
-
-// Responsive image
-@mixin img-responsive($display: block) {
-  display: $display;
-  max-width: 100%;
-  height: auto;
-}
-
-
-// Links
-// -------------------------------------
-
-@mixin underline ($color: blue, $hover-color: transparent, $visited-color: purple, $size: 1px, $bg-color: #fff) {
-  text-decoration: none !important;
-  background-position: 0 1em;
-  background-image: linear-gradient(#fff 50%, $color 50%);
-  background-repeat: repeat-x;
-  background-size: $size $size;
-
-  &:hover {
-    background-image: linear-gradient(#fff 50%, $hover-color 50%);
-  }
-
-  &:visited {
-    background-image: linear-gradient(#fff 50%, $visited-color 50%);
-  }
-}
-

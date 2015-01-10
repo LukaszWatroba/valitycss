@@ -1,6 +1,6 @@
-// =====================================
-// Button
-// =====================================
+/***************************************
+  Button
+ ***************************************/
 
 
 /**
@@ -67,12 +67,11 @@
 }
 
 
-// -------------------------------------
-// Button modifires
-// -------------------------------------
 
-// Modifier: default button
-// -------------------------------------
+/* Button modifires
+ ***************************************/
+
+/* Modifier: default button */
 
 .Button--default {
   @extend %Button--basic;
@@ -104,8 +103,7 @@
 }
 
 
-// Modifier: size large
-// -------------------------------------
+/* Modifier: size large */
 
 .Button--lg {
   font-size: $font-size-lg;
@@ -114,16 +112,14 @@
 }
 
 
-// Modifier: size small
-// -------------------------------------
+/* Modifier: size small */
 
 .Button--sm {
   font-size: $font-size-sm;
 }
 
 
-// Button fixes
-// -------------------------------------
+/* Button fixes */
 
 .Button::-moz-focus-inner {
   border: 0;

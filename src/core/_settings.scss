@@ -1,6 +1,7 @@
-// =====================================
+// -------------------------------------
 // Settings
-// =====================================
+// -------------------------------------
+
 
 // Colors
 // -------------------------------------
@@ -13,9 +14,9 @@ $gray-light:             #D8D8D8 !default;
 $gray-lighter:           #F0F0F0 !default;
 
 // Brand colors
-$brand-primary:         #2196F3 !default; // Blue
-$brand-secondary:       #F44336 !default; // Red
-$brand-tertiary:        #4CAF50 !default; // Green
+$brand-primary:         #2196F3 !default;   // Blue
+$brand-secondary:       #F44336 !default;   // Red
+$brand-tertiary:        #4CAF50 !default;   // Green
 
 $brand-info:            $brand-primary !default;
 $brand-error:           $brand-secondary !default;
@@ -33,7 +34,6 @@ $link-color:            $brand-primary !default;
 // Selection
 $selection-color:       inherit;
 $selection-background:  rgba(red($link-color), green($link-color), blue($link-color), .5);
-
 
 
 
@@ -61,6 +61,8 @@ $line-height-sm:          1.2em !default;
 $letter-spacing-md:       0.075em !default;
 $letter-spacing-sm:       0.05em !default;
 $letter-spacing-lg:       0.15em !default;
+
+$font-smoothing:          subpixel-antialiased; // antialiased; none;
 
 
 // Paddings
@@ -92,7 +94,7 @@ $headings-line-height:    $line-height-sm !default;
 $headings-text-color:     inherit !default;
 
 
-// Space
+// Spacing
 // -------------------------------------
 
 $space-md:      20px !default;
@@ -133,13 +135,6 @@ $grid-gutter-lg:        $grid-gutter-md * 2 !default;
 $arrange-gutter:         $grid-gutter-md !default;
 
 
-// Other
-// -------------------------------------
-
-$disabled-opacity:        0.6 !default;
-$color-function-value:    6% !default;
-
-
 // Border radius
 // -------------------------------------
 
@@ -155,7 +150,7 @@ $hr-border-color:        $gray-lighter;
 $hr-border:              1px solid $hr-border-color !default;
 
 
-// Form
+// Form 
 // -------------------------------------
 
 $input-multiple-size:         20px !default;
@@ -166,9 +161,18 @@ $input-multiple-size:         20px !default;
 
 $table-border:              1px solid $hr-border-color !default;
 
-// Easing functions
+
+// Easing
 // -------------------------------------
 
 $ease-out-quint:       cubic-bezier(0.230, 1.000, 0.320, 1.000);
 $ease-in-quint:        cubic-bezier(0.755, 0.050, 0.855, 0.060);
 $ease-in-out-quint:    cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
+
+// Other
+// -------------------------------------
+
+$disabled-opacity:        0.6 !default;
+$color-function-value:    6% !default;
+

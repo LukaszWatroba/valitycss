@@ -1,6 +1,6 @@
-// =====================================
-// Arrange
-// =====================================
+/***************************************
+  Arrange
+ ***************************************/
 
 
 /**
@@ -50,8 +50,11 @@
 }
 
 
-// Modifiers: vertical alignment
-// -------------------------------------
+
+/* Arrange modifires
+ ***************************************/
+ 
+/* Modifiers: vertical alignment */
 
 .Arrange--middle .Arrange-item--fill,
 .Arrange--middle .Arrange-item--fit {
@@ -64,8 +67,7 @@
 }
 
 
-// Modifier: equal-width
-// -------------------------------------
+/* Modifier: equal-width */
 
 .Arrange--equal {
   table-layout: fixed;

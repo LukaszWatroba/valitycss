@@ -1,25 +1,6 @@
-// =====================================
-// Multiple (radio & checkbox)
-// =====================================
-
-
-/**
- * Example: radio button
- * 
-  <div class="Radio [Radio--modifier]">
-    <input type="radio" id="…" value="…" />
-    <label for="…">Radio label</label>
-  </div>
- */
-
-/**
- * Example: checkbox 
- * 
-  <div class="Checkbox [Checkbox--modifier]">
-    <input type="checkbox" id="…" value="…" />
-    <label for="…">Checkbox label</label>
-  </div>
-*/
+/***************************************
+  Multiple (radio & checkbox base class)
+ ***************************************/
 
 
 %Multiple {
@@ -69,9 +50,21 @@
 }
 
 
-// -------------------------------------
-// Radio
-// -------------------------------------
+
+/***************************************
+  Radio
+ ***************************************/
+
+
+/**
+ * Example: radio button
+ * 
+  <div class="Radio [Radio--modifier]">
+    <input type="radio" id="…" value="…" />
+    <label for="…">Radio label</label>
+  </div>
+ */
+
 
 .Radio {
   @extend %Multiple;
@@ -97,12 +90,10 @@
 }
 
 
-// -------------------------------------
-// Radio modifiers
-// -------------------------------------
+/* Radio modifiers
+ ***************************************/
 
-// Modifier: default radio
-// -------------------------------------
+/* Modifier: default radio */
 
 .Radio--default {
   > label::before {
@@ -127,9 +118,21 @@
 }
 
 
-// -------------------------------------
-// Checkbox
-// -------------------------------------
+
+/***************************************
+  Checkbox
+ ***************************************/
+
+
+/**
+ * Example: checkbox 
+ * 
+  <div class="Checkbox [Checkbox--modifier]">
+    <input type="checkbox" id="…" value="…" />
+    <label for="…">Checkbox label</label>
+  </div>
+*/
+
 
 .Checkbox {
   @extend %Multiple;
@@ -151,12 +154,11 @@
 }
 
 
-// -------------------------------------
-// Checkbox modifiers
-// -------------------------------------
 
-// Modifier: default checkbox
-// -------------------------------------
+/* Checkbox modifiers
+ ***************************************/
+
+/* Modifier: default checkbox */
 
 .Checkbox--default {
   > label::before {

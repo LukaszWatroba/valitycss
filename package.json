@@ -1,6 +1,6 @@
 {
   "name": "valitycss",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "ValityCss - Minimalist, responsive and extensible framework build based on OOCSS and BEM principles.",
   "repository": {
     "type": "git",

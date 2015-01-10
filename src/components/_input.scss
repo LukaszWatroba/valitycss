@@ -1,6 +1,6 @@
-// =====================================
-// Input
-// =====================================
+/***************************************
+  Input
+ ***************************************/
 
 
 /**
@@ -36,12 +36,11 @@
 }
 
 
-// -------------------------------------
-// Input modifiers
-// -------------------------------------
 
-// Modifier: default input
-// -------------------------------------
+/* Input modifiers
+ ***************************************/
+
+/* Modifier: default input */
 
 .Input--default {
   border-color: $gray-light;
@@ -65,16 +64,14 @@
 }
 
 
-// Modifier: large input
-// -------------------------------------
+/* Modifier: large input */
 
 .Input--lg {
   font-size: $font-size-lg;
 }
 
 
-// Modifier: small input
-// -------------------------------------
+/* Modifier: small input */
 
 .Input--sm {
   font-size: $font-size-sm;

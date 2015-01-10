@@ -1,6 +1,6 @@
-// =====================================
-// Normalize
-// =====================================
+/***************************************
+  Normalize
+ ***************************************/
 
 
 html {
@@ -14,8 +14,8 @@ body {
 }
 
 
-// HTML5 display definitions
-// -------------------------------------
+
+/* Normalize: HTML5 display definitions */
 
 article,
 aside,
@@ -51,8 +51,8 @@ template {
 }
 
 
-// Links
-// -------------------------------------
+
+/* Normalize: Links */
 
 a {
   background: transparent;
@@ -64,8 +64,8 @@ a:hover {
 }
 
 
-// Text-level semantics
-// -------------------------------------
+
+/* Normalize: Text-level semantics */
 
 abbr[title] {
   border-bottom: 1px dotted;
@@ -111,8 +111,8 @@ sub {
 }
 
 
-// Embedded content
-// -------------------------------------
+
+/* Normalize: Embedded content */
 
 img {
   border: 0;
@@ -123,8 +123,8 @@ svg:not(:root) {
 }
 
 
-// Grouping content
-// -------------------------------------
+
+/* Normalize: Grouping content */
 
 figure {
   margin: 1em 40px;
@@ -149,8 +149,8 @@ samp {
 }
 
 
-// Forms
-// -------------------------------------
+
+/* Normalize: Forms */
 
 button,
 input,
@@ -237,8 +237,8 @@ optgroup {
 }
 
 
-// Tables
-// -------------------------------------
+
+/* Normalize: Tables */
 
 table {
   border-collapse: collapse;

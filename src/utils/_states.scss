@@ -1,10 +1,9 @@
-// =====================================
-// States
-// =====================================
+/***************************************
+  States
+ ***************************************/
 
 
-// Actions
-// -------------------------------------
+/* Actions */
 
 .u-isActionable {
   cursor: pointer;
@@ -19,8 +18,7 @@
 }
 
 
-// Display
-// -------------------------------------
+/* Display */
 
 .u-isHidden {
   display: none;
@@ -47,8 +45,7 @@ th.u-isShown {
 }
 
 
-// Visability
-// -------------------------------------
+/* Visability */
 
 .u-isInvisible {
   visibility: hidden;
@@ -59,8 +56,7 @@ th.u-isShown {
 }
 
 
-// Opacity
-// -------------------------------------
+/* Opacity */
 
 .u-isTransparent {
   opacity: 0;
@@ -71,8 +67,7 @@ th.u-isShown {
 }
 
 
-// Visualy hidden
-// -------------------------------------
+/* Visualy hidden */
 
 .u-isHiddenVisually {
   position: absolute;

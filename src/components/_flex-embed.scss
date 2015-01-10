@@ -1,6 +1,6 @@
-// =====================================
-// FlexEmbed
-// =====================================
+/***************************************
+  FlexEmbed
+ ***************************************/
 
 
 /**
@@ -41,44 +41,39 @@
 }
 
 
-// -------------------------------------
-// FlexEmbed modifires
-// -------------------------------------
 
-// Modifier: 1:1 aspect ratio
-// -------------------------------------
+/* FlexEmbed modifires
+ ***************************************/
+
+/* Modifier: 1:1 aspect ratio */
 
 .FlexEmbed--1by1::before {
   padding-bottom: 100%;
 }
 
 
-// Modifier: 3:1 aspect ratio
-// -------------------------------------
+/* Modifier: 3:1 aspect ratio */
 
 .FlexEmbed--3by1::before {
   padding-bottom: 33.333333%;
 }
 
 
-// Modifier: 2:1 aspect ratio
-// -------------------------------------
+/* Modifier: 2:1 aspect ratio */
 
 .FlexEmbed--2by1::before {
   padding-bottom: 50%;
 }
 
 
-// Modifier: 16:9 aspect ratio
-// -------------------------------------
+/* Modifier: 16:9 aspect ratio */
 
 .FlexEmbed--16by9::before {
   padding-bottom: 56.25%;
 }
 
 
-// Modifier: 4:3 aspect ratio
-// -------------------------------------
+/* Modifier: 4:3 aspect ratio */
 
 .FlexEmbed--4by3::before {
   padding-bottom: 75%;

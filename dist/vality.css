@@ -1,12 +1,20 @@
 /**
  * ValityCss - Minimalist, responsive and extensible framework build based on OOCSS and BEM principles.
- * @version v0.0.6 - 2014-12-30
+ * @version v0.1.0 - 2015-01-10
  * @link http://lukaszwatroba.github.io/valitycss
  * @author Łukasz Wątroba <l@lukaszwatroba.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
 
 @charset "UTF-8";
+/***************************************
+  ValityCss
+ ***************************************/
+/* Core
+ ***************************************/
+/***************************************
+  Normalize
+ ***************************************/
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -17,6 +25,7 @@ body {
   margin: 0;
 }
 
+/* Normalize: HTML5 display definitions */
 article,
 aside,
 details,
@@ -50,6 +59,7 @@ template {
   display: none;
 }
 
+/* Normalize: Links */
 a {
   background: transparent;
 }
@@ -59,6 +69,7 @@ a:hover {
   outline: 0;
 }
 
+/* Normalize: Text-level semantics */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -102,6 +113,7 @@ sub {
   bottom: -0.25em;
 }
 
+/* Normalize: Embedded content */
 img {
   border: 0;
 }
@@ -110,6 +122,7 @@ svg:not(:root) {
   overflow: hidden;
 }
 
+/* Normalize: Grouping content */
 figure {
   margin: 1em 40px;
 }
@@ -131,6 +144,7 @@ samp {
   font-size: 1em;
 }
 
+/* Normalize: Forms */
 button,
 input,
 optgroup,
@@ -213,6 +227,7 @@ optgroup {
   font-weight: bold;
 }
 
+/* Normalize: Tables */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -223,6 +238,9 @@ th {
   padding: 0;
 }
 
+/***************************************
+  Base
+ ***************************************/
 *,
 *:after,
 *::before {
@@ -254,7 +272,7 @@ body {
 }
 
 body, button, select, textarea, input {
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 a {
@@ -289,6 +307,7 @@ iframe {
   border: 0;
 }
 
+/* Base: Forms */
 fieldset {
   border: 0;
   margin: 0;
@@ -379,6 +398,7 @@ output {
   vertical-align: middle;
 }
 
+/* Base: Tables */
 table {
   max-width: 100%;
 }
@@ -387,6 +407,7 @@ th {
   text-align: left;
 }
 
+/* Base: Headings */
 h1,
 h2,
 h3,
@@ -426,6 +447,7 @@ h6 {
   letter-spacing: 0.075em;
 }
 
+/* Base: Paragraphs */
 small {
   font-size: 0.707em;
   line-height: 1.414em;
@@ -439,16 +461,19 @@ em {
   font-style: italic;
 }
 
+/* Base: Code */
 code,
 pre {
   font-family: monospace, serif;
 }
 
+/* Base: Quotes */
 blockquote {
   font-style: italic;
   display: inline-block;
 }
 
+/* Base: Lists */
 ol,
 ul {
   list-style: none;
@@ -456,12 +481,18 @@ ul {
   padding: 0;
 }
 
+/* Base: Horizontal rules */
 hr {
   margin: 20px 0;
   border: 0;
   border-top: 1px solid #f0f0f0;
 }
 
+/* Components
+ ***************************************/
+/***************************************
+  Grid
+ ***************************************/
 /**
  * Example: basic grid
  * 
@@ -479,6 +510,7 @@ hr {
     <div class="Grid-cell u-size2of8"></div>
   </div>
  */
+/* Grid container */
 .Grid {
   display: block;
   padding: 0;
@@ -503,6 +535,7 @@ hr {
   vertical-align: bottom;
 }
 
+/* Grid cell */
 .Grid-cell {
   box-sizing: border-box;
   display: inline-block;
@@ -519,6 +552,7 @@ hr {
   margin: 0 auto;
 }
 
+/* Grid (default) */
 .Grid--2col > .Grid-cell {
   width: 50%;
 }
@@ -531,6 +565,7 @@ hr {
   width: 25%;
 }
 
+/* Grid (at first breakpoint) */
 @media (min-width: 20em) {
   .sm-Grid--1col > .Grid-cell {
     width: 100%;
@@ -548,6 +583,7 @@ hr {
     width: 25%;
   }
 }
+/* Grid (at second breakpoint) */
 @media (min-width: 48em) {
   .md-Grid--1col > .Grid-cell {
     width: 100%;
@@ -565,6 +601,7 @@ hr {
     width: 25%;
   }
 }
+/* Grid (at last breakpoint) */
 @media (min-width: 64em) {
   .lg-Grid--1col > .Grid-cell {
     width: 100%;
@@ -582,6 +619,9 @@ hr {
     width: 25%;
   }
 }
+/* Grid modifiers
+ ***************************************/
+/* Gutter modifier */
 .Grid--withGutters {
   margin: 0 -15px;
 }
@@ -590,6 +630,9 @@ hr {
   padding: 0 15px;
 }
 
+/***************************************
+  Arrange
+ ***************************************/
 /**
  * Example HTML:
  *
@@ -634,6 +677,9 @@ hr {
   width: auto !important;
 }
 
+/* Arrange modifires
+ ***************************************/
+/* Modifiers: vertical alignment */
 .Arrange--middle .Arrange-item--fill,
 .Arrange--middle .Arrange-item--fit {
   vertical-align: middle;
@@ -644,6 +690,7 @@ hr {
   vertical-align: bottom;
 }
 
+/* Modifier: equal-width */
 .Arrange--equal {
   table-layout: fixed;
 }
@@ -653,6 +700,9 @@ hr {
   width: 1%;
 }
 
+/***************************************
+  Form
+ ***************************************/
 /**
  * Example: horizontally arranged label-control pairs
  * 
@@ -687,6 +737,9 @@ hr {
   border: 0;
 }
 
+/* Form item modifiers
+ ***************************************/
+/* Modifier: stacked form item */
 .Form-item--stacked .Form-label,
 .Form-item--stacked > label {
   display: block;
@@ -694,6 +747,9 @@ hr {
   margin-right: 0;
 }
 
+/***************************************
+  Input
+ ***************************************/
 /**
  * Example HTML:
  *
@@ -719,6 +775,9 @@ hr {
   opacity: 0.6;
 }
 
+/* Input modifiers
+ ***************************************/
+/* Modifier: default input */
 .Input--default {
   border-color: #d8d8d8;
   padding: 5px;
@@ -736,14 +795,19 @@ hr {
   border-color: #f44336;
 }
 
+/* Modifier: large input */
 .Input--lg {
   font-size: 1.414em;
 }
 
+/* Modifier: small input */
 .Input--sm {
   font-size: 0.707em;
 }
 
+/***************************************
+  Input group
+ ***************************************/
 /**
  * Example: input with button
  *
@@ -775,6 +839,7 @@ hr {
   z-index: 1;
 }
 
+/* Input group item */
 .InputGroup-item {
   display: table-cell;
   padding: 0;
@@ -790,6 +855,7 @@ hr {
   width: 100%;
 }
 
+/* Input group addon */
 .InputGroup-addon {
   box-sizing: border-box;
   display: inline-block;
@@ -802,14 +868,19 @@ hr {
   color: inherit;
 }
 
+/* Input group modifires
+ ***************************************/
+/* Modifier: size large */
 .InputGroup--lg {
   font-size: 1.414em;
 }
 
+/* Modifier: size small */
 .InputGroup--sm {
   font-size: 0.707em;
 }
 
+/* Modifier: collapse borders */
 .InputGroup--borderCollapse .InputGroup-item:not(:first-child):not(:last-child) > .Input,
 .InputGroup--borderCollapse .InputGroup-item:not(:first-child):not(:last-child) > .Button
 .InputGroup--borderCollapse .InputGroup-item:not(:first-child):not(:last-child) > .InputGroup-addon {
@@ -840,22 +911,9 @@ hr {
   margin-left: -1px;
 }
 
-/**
- * Example: radio button
- * 
-  <div class="Radio [Radio--modifier]">
-    <input type="radio" id="…" value="…" />
-    <label for="…">Radio label</label>
-  </div>
- */
-/**
- * Example: checkbox 
- * 
-  <div class="Checkbox [Checkbox--modifier]">
-    <input type="checkbox" id="…" value="…" />
-    <label for="…">Checkbox label</label>
-  </div>
-*/
+/***************************************
+  Multiple (radio & checkbox base class)
+ ***************************************/
 .Radio, .Checkbox {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -898,6 +956,17 @@ hr {
   margin-top: -10px;
 }
 
+/***************************************
+  Radio
+ ***************************************/
+/**
+ * Example: radio button
+ * 
+  <div class="Radio [Radio--modifier]">
+    <input type="radio" id="…" value="…" />
+    <label for="…">Radio label</label>
+  </div>
+ */
 .Radio > label::before {
   border-radius: 50%;
 }
@@ -914,6 +983,9 @@ hr {
   opacity: 0.6;
 }
 
+/* Radio modifiers
+ ***************************************/
+/* Modifier: default radio */
 .Radio--default > label::before {
   background-color: #d8d8d8;
   border-color: #d8d8d8;
@@ -932,6 +1004,17 @@ hr {
   color: white;
 }
 
+/***************************************
+  Checkbox
+ ***************************************/
+/**
+ * Example: checkbox 
+ * 
+  <div class="Checkbox [Checkbox--modifier]">
+    <input type="checkbox" id="…" value="…" />
+    <label for="…">Checkbox label</label>
+  </div>
+*/
 .Checkbox > label::before {
   border-radius: 2px;
 }
@@ -945,6 +1028,9 @@ hr {
   opacity: 0.6;
 }
 
+/* Checkbox modifiers
+ ***************************************/
+/* Modifier: default checkbox */
 .Checkbox--default > label::before {
   background-color: #d8d8d8;
   border-color: #d8d8d8;
@@ -963,8 +1049,11 @@ hr {
   color: white;
 }
 
+/***************************************
+  Select
+ ***************************************/
 /**
- * Example: select box
+ * Example: select
  *
   <div class="Select [Select--modifier]">
     <select name="options">
@@ -1032,6 +1121,9 @@ hr {
   outline: none;
 }
 
+/* Select madifiers
+ ***************************************/
+/* Modifier: default select */
 .Select--default::before {
   border-radius: 0 4px 4px 0;
   background-color: #c9c9c9;
@@ -1048,14 +1140,19 @@ hr {
   border-color: #e7e7e7;
 }
 
+/* Modifier: large select */
 .Select--lg {
   font-size: 1.414em;
 }
 
+/* Modifier: small select */
 .Select--sm {
   font-size: 0.707em;
 }
 
+/***************************************
+  Button
+ ***************************************/
 /**
  * Example HTML:
  *
@@ -1109,6 +1206,9 @@ hr {
   border-radius: 4px;
 }
 
+/* Button modifires
+ ***************************************/
+/* Modifier: default button */
 .Button--default {
   background-color: #2196f3;
   border-color: #2196f3;
@@ -1131,21 +1231,27 @@ hr {
   color: white;
 }
 
+/* Modifier: size large */
 .Button--lg {
   font-size: 1.414em;
   padding-right: 20px;
   padding-left: 20px;
 }
 
+/* Modifier: size small */
 .Button--sm {
   font-size: 0.707em;
 }
 
+/* Button fixes */
 .Button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
+/***************************************
+  Button group
+ ***************************************/
 /**
  * Example HTML:
  * 
@@ -1178,10 +1284,14 @@ hr {
   z-index: 1;
 }
 
+/* Button group modifires
+ ***************************************/
+/* Modifier: horizontal buttons */
 .ButtonGroup--hz > .ButtonGroup-item {
   display: inline-block;
 }
 
+/* Modifier: horizontal collapse */
 .ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item {
   margin-top: -1px;
 }
@@ -1204,6 +1314,7 @@ hr {
   border-top-right-radius: 0;
 }
 
+/* Modifier: horizontal collapse */
 .ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item {
   margin-left: -1px;
 }
@@ -1226,6 +1337,9 @@ hr {
   border-top-left-radius: 0;
 }
 
+/***************************************
+  Table
+ ***************************************/
 /**
  * Example HTML:
  *
@@ -1293,6 +1407,9 @@ hr {
   border-top: 1px solid #f0f0f0;
 }
 
+/* Table modifires
+ ***************************************/
+/* Modifier: condensed table */
 .Table--condensed caption {
   padding: 5px 5px;
 }
@@ -1305,6 +1422,7 @@ hr {
   padding: 5px 5px;
 }
 
+/* Modifier: bordered table */
 .Table--bordered {
   border: 1px solid #f0f0f0;
 }
@@ -1317,11 +1435,13 @@ hr {
   border: 1px solid #f0f0f0;
 }
 
+/* Modifier: striped table */
 .Table--striped tbody > tr:nth-child(odd) > td,
 .Table--striped tbody > tr:nth-child(odd) > th {
   background-color: rgba(0, 0, 0, 0.03);
 }
 
+/* Modifier: hover table */
 .Table--hover tbody > tr > td,
 .Table--hover tbody > tr > th {
   transition: background-color 0.5s;
@@ -1331,6 +1451,9 @@ hr {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
+/***************************************
+  Navigation
+ ***************************************/
 /**
  * Example: navigation
  *
@@ -1355,10 +1478,16 @@ hr {
   display: block;
 }
 
+/* Navigation modifires
+ ***************************************/
+/* Modifier: horizontal */
 .Navigation--hz .Navigation-item {
   display: inline-block;
 }
 
+/***************************************
+  FlexEmbed
+ ***************************************/
 /**
  * Example HTML:
  *
@@ -1393,26 +1522,36 @@ hr {
   width: 100%;
 }
 
+/* FlexEmbed modifires
+ ***************************************/
+/* Modifier: 1:1 aspect ratio */
 .FlexEmbed--1by1::before {
   padding-bottom: 100%;
 }
 
+/* Modifier: 3:1 aspect ratio */
 .FlexEmbed--3by1::before {
   padding-bottom: 33.333333%;
 }
 
+/* Modifier: 2:1 aspect ratio */
 .FlexEmbed--2by1::before {
   padding-bottom: 50%;
 }
 
+/* Modifier: 16:9 aspect ratio */
 .FlexEmbed--16by9::before {
   padding-bottom: 56.25%;
 }
 
+/* Modifier: 4:3 aspect ratio */
 .FlexEmbed--4by3::before {
   padding-bottom: 75%;
 }
 
+/***************************************
+  Spinner
+ ***************************************/
 /**
  * Example HTML:
  *
@@ -1442,23 +1581,33 @@ hr {
           animation: Spinner-spin 0.5s linear infinite;
 }
 
+/* Spinner modifiers
+ ***************************************/
+/* Modifier: default spinner */
 .Spinner--default {
   border-top-color: #4caf50;
   border-left-color: #4caf50;
 }
 
+/* Modifier: large spinner */
 .Spinner--lg {
   width: 22px;
   height: 22px;
   border-width: 3px;
 }
 
+/* Modifier: small spinner */
 .Spinner--sm {
   width: 11px;
   height: 11px;
   border-width: 1px;
 }
 
+/* Utils
+ ***************************************/
+/***************************************
+  Display
+ ***************************************/
 .u-block {
   display: block;
 }
@@ -1498,6 +1647,10 @@ hr {
   display: table-row;
 }
 
+/***************************************
+  Layout
+ ***************************************/
+/* Floats */
 .u-pullLeft {
   float: left;
 }
@@ -1506,18 +1659,21 @@ hr {
   float: right;
 }
 
+/* Clearfix */
 .u-cf:before, .u-cf:after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 .u-cf:after {
   clear: both;
 }
 
+/* Overflow */
 .u-hideOverflow {
   overflow: hidden;
 }
 
+/* Wrappers */
 .u-wrapper {
   display: block;
   max-width: 48em;
@@ -1536,6 +1692,9 @@ hr {
   margin: 0 auto;
 }
 
+/***************************************
+  Link
+ ***************************************/
 /**
  * Complex link example HTML:
  *
@@ -1572,6 +1731,9 @@ hr {
   text-decoration: none !important;
 }
 
+/***************************************
+  Size
+ ***************************************/
 .u-sizeFull {
   box-sizing: border-box;
   display: block;
@@ -1693,7 +1855,9 @@ hr {
   width: 91.666666%;
 }
 
+/* Size (breakpoint 1 */
 @media (min-width: 20em) {
+  /* Intrinsic widths */
   .u-sm-sizeFit,
   .u-sm-sizeFitAlt {
     display: block;
@@ -1727,6 +1891,7 @@ hr {
     width: auto;
   }
 
+  /* Proportional widths */
   .u-sm-size1of12 {
     width: 8.333333%;
   }
@@ -1838,7 +2003,9 @@ hr {
     width: 91.666666%;
   }
 }
+/* Size (breakpoint 2 */
 @media (min-width: 48em) {
+  /* Intrinsic widths */
   .u-md-sizeFit,
   .u-md-sizeFitAlt {
     display: block;
@@ -1872,6 +2039,7 @@ hr {
     width: auto;
   }
 
+  /* Proportional widths */
   .u-md-size1of12 {
     width: 8.333333%;
   }
@@ -1983,7 +2151,9 @@ hr {
     width: 91.666666%;
   }
 }
+/* Size (breakpoint 3 */
 @media (min-width: 64em) {
+  /* Intrinsic widths */
   .u-lg-sizeFit,
   .u-lg-sizeFitAlt {
     display: block;
@@ -2017,6 +2187,7 @@ hr {
     width: auto;
   }
 
+  /* Proportional widths */
   .u-lg-size1of12 {
     width: 8.333333%;
   }
@@ -2128,6 +2299,11 @@ hr {
     width: 91.666666%;
   }
 }
+/***************************************
+  Offset
+ ***************************************/
+/* Before
+ ***************************************/
 .u-before1of12 {
   margin-left: 8.333333%;
 }
@@ -2239,6 +2415,8 @@ hr {
   margin-left: 91.666666%;
 }
 
+/* After
+ ***************************************/
 .u-after1of12 {
   margin-right: 8.333333%;
 }
@@ -2350,7 +2528,9 @@ hr {
   margin-right: 91.666666%;
 }
 
+/* Offset (breakpoint 1) */
 @media (min-width: 20em) {
+  /* Before */
   .u-sm-beforeNone {
     margin-left: 0;
   }
@@ -2466,6 +2646,7 @@ hr {
     margin-left: 91.666666%;
   }
 
+  /* After */
   .u-sm-afterNone {
     margin-right: 0;
   }
@@ -2581,7 +2762,9 @@ hr {
     margin-right: 91.666666%;
   }
 }
+/* Offset (breakpoint 2) */
 @media (min-width: 48em) {
+  /* Before */
   .u-md-beforeNone {
     margin-left: 0;
   }
@@ -2697,6 +2880,7 @@ hr {
     margin-left: 91.666666%;
   }
 
+  /* After */
   .u-md-afterNone {
     margin-right: 0;
   }
@@ -2812,7 +2996,9 @@ hr {
     margin-right: 91.666666%;
   }
 }
+/* Offset (breakpoint 3) */
 @media (min-width: 64em) {
+  /* Before */
   .u-lg-beforeNone {
     margin-left: 0;
   }
@@ -2928,6 +3114,7 @@ hr {
     margin-left: 91.666666%;
   }
 
+  /* After */
   .u-lg-afterNone {
     margin-right: 0;
   }
@@ -3043,6 +3230,10 @@ hr {
     margin-right: 91.666666%;
   }
 }
+/***************************************
+  Typography
+ ***************************************/
+/* Headings */
 .u-h1,
 .u-h2,
 .u-h3,
@@ -3082,6 +3273,7 @@ hr {
   letter-spacing: 0.075em;
 }
 
+/* Font weights */
 .u-weightLight {
   font-weight: 100 !important;
 }
@@ -3094,6 +3286,7 @@ hr {
   font-weight: 700 !important;
 }
 
+/* Capital case */
 .u-caps {
   text-transform: uppercase !important;
 }
@@ -3102,6 +3295,7 @@ hr {
   text-transform: lowercase !important;
 }
 
+/* Paragraphs */
 .u-paragraphsIndent p + p {
   text-indent: 2.828em;
   margin-top: -1.414em;
@@ -3115,6 +3309,7 @@ hr {
           hyphens: auto;
 }
 
+/* Text formatting */
 .u-formatedText h1,
 .u-formatedText h2,
 .u-formatedText h3,
@@ -3157,20 +3352,24 @@ hr {
   margin: 0 auto 20px;
 }
 
+/***************************************
+  Space
+ ***************************************/
 /**
- * A = all
- * T = top
- * R = right
- * B = bottom
- * L = left
- * H = horizontal
- * V = vertical
- *
- * n = none
- * s = small
- * m = medium
- * l = large
+  A = all
+  T = top
+  R = right
+  B = bottom
+  L = left
+  H = horizontal
+  V = vertical
+ 
+  n = none
+  s = small
+  m = medium
+  l = large
  */
+/* All */
 .u-paddingAn {
   padding: 0;
 }
@@ -3203,6 +3402,7 @@ hr {
   margin: 40px;
 }
 
+/* Vertical */
 .u-paddingVn {
   padding-top: 0;
   padding-bottom: 0;
@@ -3243,6 +3443,7 @@ hr {
   margin-bottom: 40px;
 }
 
+/* Horizontal */
 .u-paddingHn {
   padding-left: 0;
   padding-right: 0;
@@ -3283,6 +3484,7 @@ hr {
   margin-right: 40px;
 }
 
+/* Top */
 .u-paddingTn {
   padding-top: 0;
 }
@@ -3315,6 +3517,7 @@ hr {
   margin-top: 40px;
 }
 
+/* Bottom */
 .u-paddingBn {
   padding-bottom: 0;
 }
@@ -3347,6 +3550,7 @@ hr {
   margin-bottom: 40px;
 }
 
+/* Left */
 .u-paddingLn {
   padding-left: 0;
 }
@@ -3379,6 +3583,7 @@ hr {
   margin-left: 40px;
 }
 
+/* Right */
 .u-paddingRn {
   padding-right: 0;
 }
@@ -3411,6 +3616,10 @@ hr {
   margin-right: 40px;
 }
 
+/***************************************
+  States
+ ***************************************/
+/* Actions */
 .u-isActionable {
   cursor: pointer;
 }
@@ -3423,6 +3632,7 @@ hr {
   cursor: move;
 }
 
+/* Display */
 .u-isHidden {
   display: none;
   visibility: hidden;
@@ -3447,6 +3657,7 @@ th.u-isShown {
   display: table-cell;
 }
 
+/* Visability */
 .u-isInvisible {
   visibility: hidden;
 }
@@ -3455,6 +3666,7 @@ th.u-isShown {
   visibility: visible;
 }
 
+/* Opacity */
 .u-isTransparent {
   opacity: 0;
 }
@@ -3463,6 +3675,7 @@ th.u-isShown {
   opacity: 1;
 }
 
+/* Visualy hidden */
 .u-isHiddenVisually {
   position: absolute;
   overflow: hidden;
@@ -3473,10 +3686,15 @@ th.u-isShown {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+/***************************************
+  Text
+ ***************************************/
+/* Word breaking */
 .u-textBreak {
   word-wrap: break-word;
 }
 
+/* Alligment */
 .u-textCenter {
   text-align: center;
 }
@@ -3489,18 +3707,22 @@ th.u-isShown {
   text-align: right;
 }
 
+/* Inherit color  */
 .u-textInheritColor {
   color: inherit;
 }
 
+/* Invert color  */
 .u-textInvertColor {
   color: white;
 }
 
+/* Whitespace wrapping  */
 .u-textNoWrap {
   white-space: nowrap;
 }
 
+/* Font kerning */
 .u-textKern {
   text-rendering: optimizeLegibility;
   -webkit-font-feature-settings: 'kern' 1;
@@ -3511,6 +3733,7 @@ th.u-isShown {
           font-kerning: normal;
 }
 
+/* Text truncation */
 .u-textTruncate {
   max-width: 100%;
   overflow: hidden;
@@ -3519,6 +3742,9 @@ th.u-isShown {
   word-wrap: normal;
 }
 
+/***************************************
+  Align
+ ***************************************/
 .u-alignBaseline {
   vertical-align: baseline;
 }
@@ -3535,12 +3761,16 @@ th.u-isShown {
   vertical-align: top;
 }
 
+/***************************************
+  Responsive
+ ***************************************/
 .u-responsiveImage {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
+/* Responsive: breakpoint 1 */
 @media (min-width: 20em) {
   .u-sm-isHidden {
     display: none;
@@ -3566,6 +3796,7 @@ th.u-isShown {
     display: table-cell;
   }
 }
+/* Responsive: breakpoint 2 */
 @media (min-width: 48em) {
   .u-md-isHidden {
     display: none;
@@ -3591,6 +3822,7 @@ th.u-isShown {
     display: table-cell;
   }
 }
+/* Responsive: breakpoint 3 */
 @media (min-width: 64em) {
   .u-lg-isHidden {
     display: none;
@@ -3616,6 +3848,7 @@ th.u-isShown {
     display: table-cell;
   }
 }
+/* Responsive: print */
 @media print {
   .u-print-isHidden {
     display: none;

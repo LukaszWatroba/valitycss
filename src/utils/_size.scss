@@ -1,6 +1,6 @@
-// =====================================
-// Size 
-// =====================================
+/***************************************
+  Size
+ ***************************************/
 
 
 .u-sizeFull {
@@ -125,14 +125,11 @@
 }
 
 
-// -------------------------------------
-// Size (breakpoint 1)
-// -------------------------------------
+/* Size (breakpoint 1 */
 
 @media (min-width: $screen-sm) {
   
-  // Intrinsic widths
-  // -------------------------------------
+  /* Intrinsic widths */
 
   .u-sm-sizeFit,
   .u-sm-sizeFitAlt {
@@ -169,8 +166,7 @@
   }
 
 
-  // Proportional widths
-  // -------------------------------------
+  /* Proportional widths */
 
   .u-sm-size1of12 {
     width: 8.333333%;
@@ -286,14 +282,11 @@
 }
 
 
-// -------------------------------------
-// Size (breakpoint 2)
-// -------------------------------------
+/* Size (breakpoint 2 */
 
 @media (min-width: $screen-md) {
 
-  // Intrinsic widths
-  // -------------------------------------
+  /* Intrinsic widths */
 
   .u-md-sizeFit,
   .u-md-sizeFitAlt {
@@ -330,8 +323,7 @@
   }
 
 
-  // Proportional widths
-  // -------------------------------------
+  /* Proportional widths */
 
   .u-md-size1of12 {
     width: 8.333333%;
@@ -447,14 +439,11 @@
 }
 
 
-// -------------------------------------
-// Size (breakpoint 3)
-// -------------------------------------
+/* Size (breakpoint 3 */
 
 @media (min-width: $screen-lg) {
 
-  // Intrinsic widths
-  // -------------------------------------
+  /* Intrinsic widths */
 
   .u-lg-sizeFit,
   .u-lg-sizeFitAlt {
@@ -491,8 +480,7 @@
   }
 
 
-  // Proportional widths
-  // -------------------------------------
+  /* Proportional widths */
 
   .u-lg-size1of12 {
     width: 8.333333%;

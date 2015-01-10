@@ -1,10 +1,10 @@
-// =====================================
-// Select
-// =====================================
+/***************************************
+  Select
+ ***************************************/
 
 
 /**
- * Example: select box
+ * Example: select
  *
   <div class="Select [Select--modifier]">
     <select name="options">
@@ -82,12 +82,11 @@
 }
 
 
-// -------------------------------------
-// Select madifiers
-// -------------------------------------
 
-// Modifier: default select box
-// -------------------------------------
+/* Select madifiers
+ ***************************************/
+
+/* Modifier: default select */
 
 .Select--default {
   &::before { 
@@ -112,16 +111,14 @@
 }
 
 
-// Modifier: large select box
-// -------------------------------------
+/* Modifier: large select */
 
 .Select--lg {
   font-size: $font-size-lg;
 }
 
 
-// Modifier: small select box
-// -------------------------------------
+/* Modifier: small select */
 
 .Select--sm {
   font-size: $font-size-sm;
