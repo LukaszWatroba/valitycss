@@ -1,7 +1,35 @@
 # ValityCss
 Minimalist, responsive and extensible framework build based on OOCSS and BEM principles.
 
-[Demo](http://lukaszwatroba.github.io/valitycss)
+
+## Demos
+  - [GitHub](http://lukaszwatroba.github.io/valitycss)
+  - [CodePen](http://codepen.io/LukaszWatroba/pen/raLZZb)
+
+
+## Installation
+  - Use [bower](http://bower.io/) `bower install valitycss`, or download files [from the github repo](./dist)
+  - Reference `vality.min.css` index.html file
+
+
+## Sass
+If you are using sass, just import vality into Sass file.
+
+```scss
+@import "vendor/vality";
+```
+
+You can override vality variables by simply redefining the variable before the @import directive, e.g.:
+
+```scss
+$font-family-sans: Helvetica, sans-serif;
+$brand-primary: #5c31d9;
+$link-color: #009cd6;
+
+@import "vendor/vality";
+```
+
+The full list of vality variables can be found [here](https://github.com/LukaszWatroba/valitycss/blob/master/src/core/_settings.scss).
 
 
 ## Core
