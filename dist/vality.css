@@ -1,6 +1,6 @@
 /**
- * ValityCss - Minimalist, responsive and extensible framework build based on OOCSS and BEM principles.
- * @version v0.1.0 - 2015-01-10
+ * ValityCss - Sass-based, minimalist and scalable framework.
+ * @version v0.2.0 - 2015-01-12
  * @link http://lukaszwatroba.github.io/valitycss
  * @author Łukasz Wątroba <l@lukaszwatroba.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -912,23 +912,29 @@ hr {
 }
 
 /***************************************
-  Multiple (radio & checkbox base class)
+  Checkbox
  ***************************************/
-.Radio, .Checkbox {
+/**
+ * Example: checkbox 
+ * 
+  <div class="Checkbox [Checkbox--modifier]">
+    <input type="checkbox" id="…" value="…" />
+    <label for="…">Checkbox label</label>
+  </div>
+*/
+.Checkbox {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
-.Radio > label, .Checkbox > label {
+.Checkbox > label {
   display: inline-block;
   position: relative;
   line-height: 20px;
   cursor: pointer;
   padding-left: 30px;
 }
-.Radio > input[type=radio], .Checkbox > input[type=radio],
-.Radio > input[type=checkbox],
 .Checkbox > input[type=checkbox] {
   position: absolute;
   overflow: hidden;
@@ -939,10 +945,11 @@ hr {
   clip: rect(1px, 1px, 1px, 1px);
   line-height: normal;
 }
-.Radio > label::before, .Checkbox > label::before {
+.Checkbox > label::before {
   content: '';
   display: inline-block;
   box-sizing: border-box;
+  border-radius: 2px;
   width: 20px;
   height: 20px;
   line-height: 18px;
@@ -954,6 +961,36 @@ hr {
   left: 0;
   top: 50%;
   margin-top: -10px;
+}
+.Checkbox > input[type=checkbox]:checked + label:before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><polygon fill="%23FFFFFF" points="13.1,4.3 7.4,10 4.9,7.5 3,9.4 7.4,13.7 15,6.1 "/></svg>');
+}
+.Checkbox > input[type=checkbox]:disabled + label,
+.Checkbox > input[type=checkbox].is-disabled + label {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Checkbox modifiers
+ ***************************************/
+/* Modifier: default checkbox */
+.Checkbox--default > label::before {
+  background-color: #d8d8d8;
+  border-color: #d8d8d8;
+  color: #212121;
+  transition: all 0.25s;
+}
+.Checkbox--default > label:hover::before,
+.Checkbox--default > input:focus + label::before,
+.Checkbox--default > input:active + label::before {
+  border-color: #e7e7e7;
+  background-color: #e7e7e7;
+}
+.Checkbox--default > input[type=checkbox]:checked + label:before {
+  border-color: #4caf50;
+  background-color: #4caf50;
+  color: white;
 }
 
 /***************************************
@@ -967,8 +1004,45 @@ hr {
     <label for="…">Radio label</label>
   </div>
  */
+.Radio {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.Radio > label {
+  display: inline-block;
+  position: relative;
+  line-height: 20px;
+  cursor: pointer;
+  padding-left: 30px;
+}
+.Radio > input[type=radio] {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  line-height: normal;
+}
 .Radio > label::before {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
   border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
+  text-align: center;
+  border: 1px solid transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -10px;
 }
 .Radio > input[type=radio] + label:before {
   font-size: 32px;
@@ -999,51 +1073,6 @@ hr {
   background-color: #e7e7e7;
 }
 .Radio--default > input[type=radio]:checked + label:before {
-  border-color: #4caf50;
-  background-color: #4caf50;
-  color: white;
-}
-
-/***************************************
-  Checkbox
- ***************************************/
-/**
- * Example: checkbox 
- * 
-  <div class="Checkbox [Checkbox--modifier]">
-    <input type="checkbox" id="…" value="…" />
-    <label for="…">Checkbox label</label>
-  </div>
-*/
-.Checkbox > label::before {
-  border-radius: 2px;
-}
-.Checkbox > input[type=checkbox]:checked + label:before {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><polygon fill="%23FFFFFF" points="13.1,4.3 7.4,10 4.9,7.5 3,9.4 7.4,13.7 15,6.1 "/></svg>');
-}
-.Checkbox > input[type=checkbox]:disabled + label,
-.Checkbox > input[type=checkbox].is-disabled + label {
-  cursor: default;
-  pointer-events: none;
-  opacity: 0.6;
-}
-
-/* Checkbox modifiers
- ***************************************/
-/* Modifier: default checkbox */
-.Checkbox--default > label::before {
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: #212121;
-  transition: all 0.25s;
-}
-.Checkbox--default > label:hover::before,
-.Checkbox--default > input:focus + label::before,
-.Checkbox--default > input:active + label::before {
-  border-color: #e7e7e7;
-  background-color: #e7e7e7;
-}
-.Checkbox--default > input[type=checkbox]:checked + label:before {
   border-color: #4caf50;
   background-color: #4caf50;
   color: white;

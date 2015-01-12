@@ -1,7 +1,7 @@
 {
   "name": "valitycss",
   "main": "dist/vality.css",
-  "description": "ValityCss - Minimalist, responsive and extensible framework build based on OOCSS and BEM principles.",
+  "description": "ValityCss - Sass-based, minimalist and scalable framework.",
   "homepage": "http://lukaszwatroba.github.io/valitycss",
   "authors": [
     "Łukasz Wątroba <l@lukaszwatroba.com>"

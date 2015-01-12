@@ -1,10 +1,7 @@
 # ValityCss
-Minimalist, responsive and extensible framework build based on OOCSS and BEM principles.
+Sass-based, minimalist and scalable framework.
 
-
-## Demos
-  - [GitHub](http://lukaszwatroba.github.io/valitycss)
-  - [CodePen](http://codepen.io/LukaszWatroba/pen/raLZZb)
+[Demo](http://lukaszwatroba.github.io/valitycss)
 
 
 ## Installation
@@ -33,201 +30,38 @@ The full list of vality variables can be found [here](https://github.com/LukaszW
 
 
 ## Core
-- _base.scss
-- _helpers.scss
-- _normalize.scss
-- _settings.scss
-
+- [_base.scss](./src/core/_base.scss)
+- [_helpers.scss](./src/core/_helpers.scss)
+- [_normalize.scss](./src/core/_normalize.scss)
+- [_settings.scss](./src/core/_settings.scss)
 
 
 ## Components:
-#### Arrange:
-```html
-<div class="Arrange [Arrange--middle|Arrange--bottom|Arrange--equal] [Arrange--withGutter]">
-  <div class="Arrange-item Arrange-item--fit">[content]</div>
-  <div class="Arrange-item Arrange-item--fill">[content]</div>
-  <div class="Arrange-item Arrange-item--fit">[content]</div>
-</div>
-```
-_arrange.scss
-
-
-#### ButtonGroup:
-```html
-<div class="ButtonGroup [ButtonGroup--hz|ButtonGroup--borderCollapse]">
-  <div class="ButtonGroup-item">[content]</div>
-  <div class="ButtonGroup-item">[content]</div>
-  <div class="ButtonGroup-item">[content]</div>
-</div>
-```
-_button-group.scss
-
-
-#### Button:
-```html
-<a class="Button [Button--modifier]" role="button" href="[url]">[label]</a>
-<button class="Button [Button--modifier]" type="button">[label]</button>
-<input class="Button [Button--modifier]" type="button" value="[label]">
-```
-_button.scss
-
-
-#### FlexEmbed:
-```html
-<div class="FlexEmbed [FlexEmbed--modifier]">
-  <iframe class="FlexEmbed-item" src="[src]"></iframe>
-</div>
- 
-<div class="FlexEmbed [FlexEmbed--modifier]">
-  [iframe|object|embed]
-</div>
-```
-_flex-embed.scss
-
-
-#### Form:
-```html
-<form class="Form [Form--modifier]">
-  <div class="Form-item [Form-item--modifier]">
-    [content]
-  </div>
-
-  <div class="Form-item [Form-item--modifier]">
-    [content]
-  </div>
-</form>
-```
-_button.scss
-
-
-#### Grid:
-```html
-<div class="Grid [Grid--modifier]">
-  <div class="Grid-cell">[content]</div>
-  <div class="Grid-cell">[content]</div>
-</div>
-```
-```html
-<div class="Grid [Grid--alignCenter|Grid--alignRight]">
-  <div class="Grid-cell u-size2of8">[content]</div>
-  <div class="Grid-cell u-size2of8">[content]</div>
-  <div class="Grid-cell u-size2of8">[content]</div>
-</div>
-```
-_grid.scss
-
-
-#### InputGroup:
-```html
-<div class="InputGroup [InputGroup--modifier]">
-  <div class="InputGroup-item [InputGroup-item--modifier]">
-    [input|button]
-  </div>
-  <div class="InputGroup-item [InputGroup-item--modifier]">
-    [input|button]
-  </div>
-</div>
-```
-_input-group.scss
-
-
-#### Input:
-```html
-<input type="[type]" class="Input [Input--modifier]" />
-```
-_input.scss
-
-
-#### Radio:
-```html
-<div class="Radio [Radio--modifier]">
-  <input type="radio" id="[id]" value="[value]" />
-  <label for="[id]">[label]</label>
-</div>
-```
-_multiple.scss
-
-
-#### Checkbox:
-```html
-<div class="Checkbox [Checkbox--modifier]">
-  <input type="checkbox" id="[id]" value="[value]" />
-  <label for="[id]">[label]</label>
-</div>
-```
-_multiple.scss
-
-
-#### Navigation:
-```html
-<ol class="Navigation [Navigation--modifier]">
-  <li class="Navigation-item">
-    [content]
-  </li>
-</ol>
-```
-_navigation.scss
-
-
-#### Select:
-```html
-<div class="Select [Select--modifier]">
-  <select>
-    <option value="[option]">[text]</option>
-    <option value="[option]">[text]</option>
-    <option value="[option]">[text]</option>
-  </select>
-</div>
-```
-_select.scss
-
-
-#### Spinner:
-```html
-<span class="Spinner [Spinner--modifier]"></span>
-```
-_spinner.scss
-
-
-#### Table:
-```html
-<table class="Table [Table--condensed|Table--bordered]">
-  <caption>[content]</caption>
-   
-  <thead>
-    <tr>
-      <th>[content]</th>
-      <th>[content]</th>
-    </tr>
-  </thead>
-   
-  <tbody>
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-
-  <tfoot>
-    <tr>
-      <td colspan="2">[content]</td>
-    </tr>
-  </tfoot>  
-</table>
-```
-_table.scss
-
+- [_button.scss](./src/components/_button.scss)
+- [_button-group.scss](./src/components/_button-group.scss)
+- [_form.scss](./src/components/_form.scss)
+- [_input.scss](./src/components/_input.scss)
+- [_input-group.scss](./src/components/_input-group.scss)
+- [_chackbox.scss](./src/components/_chackbox.scss)
+- [_radio.scss](./src/components/_radio.scss)
+- [_select.scss](./src/components/_select.scss)
+- [_grid.scss](./src/components/_grid.scss)
+- [_table.scss](./src/components/_table.scss)
+- [_navigation.scss](./src/components/_navigation.scss)
+- [_arrange.scss](./src/components/_arrange.scss)
+- [_flex-embed.scss](./src/components/_flex-embed.scss)
+- [_spinner.scss](./src/components/_spinner.scss)
 
 
 ## Utils
-- _align.scss
-- _display.scss
-- _layout.scss
-- _link.scss
-- _offset.scss
-- _responsive.scss
-- _size.scss
-- _space.scss
-- _states.scss
-- _text.scss
-- _typography.scss
+- [_align.scss](./src/utils/_align.scss)
+- [_display.scss](./src/utils/_display.scss)
+- [_layout.scss](./src/utils/_layout.scss)
+- [_link.scss](./src/utils/_link.scss)
+- [_offset.scss](./src/utils/_offset.scss)
+- [_responsive.scss](./src/utils/_responsive.scss)
+- [_size.scss](./src/utils/_size.scss)
+- [_space.scss](./src/utils/_space.scss)
+- [_states.scss](./src/utils/_states.scss)
+- [_text.scss](./src/utils/_text.scss)
+- [_typography.scss](./src/utils/_typography.scss)
