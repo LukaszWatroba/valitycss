@@ -56,11 +56,6 @@
     border-color: $brand-info;
     box-shadow: inset 0px 1px 1px rgba(0,0,0, 0);
   }
-
-  &:invalid,
-  &.is-invalid {
-    border-color: $brand-error;
-  }
 }
 
 
