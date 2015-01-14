@@ -25,7 +25,7 @@ $brand-success:         $brand-tertiary !default;
 // Default colors
 $body-background:       white !default;
 $text-color:            $gray-darker !default;
-$text-color-light:      $gray;
+$text-color-light:      darken($gray-light, 12%);
 $text-color-invert:     white;
 
 // Links

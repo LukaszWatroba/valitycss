@@ -1,6 +1,6 @@
 /**
  * ValityCss - Sass-based, minimalist and scalable framework.
- * @version v0.2.0 - 2015-01-13
+ * @version v0.2.0 - 2015-01-14
  * @link http://lukaszwatroba.github.io/valitycss
  * @author Łukasz Wątroba <l@lukaszwatroba.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -369,25 +369,25 @@ input[type="checkbox"]:focus {
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   font-style: italic;
-  color: #757575;
+  color: #b9b9b9;
 }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
   font-style: italic;
-  color: #757575;
+  color: #b9b9b9;
 }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   font-style: italic;
-  color: #757575;
+  color: #b9b9b9;
 }
 
 input::placeholder,
 textarea::placeholder {
   font-style: italic;
-  color: #757575;
+  color: #b9b9b9;
 }
 
 output {
