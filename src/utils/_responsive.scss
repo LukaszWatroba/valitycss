@@ -36,6 +36,36 @@
   th.u-sm-isShown {
     display: table-cell;
   }
+
+  @if $grid {
+    .Grid-cell.u-sm-isShown {
+      display: inline-block;
+    }
+  }
+
+  @if $arrange {
+    .Arrange-item.u-sm-isShown {
+      display: table-cell;
+    }
+  }
+
+  @if $button-group {
+    .ButtonGroup--hz > .ButtonGroup-item.u-sm-isShown {
+      display: inline-block;
+    }
+  }
+
+  @if $input-group {
+    .InputGroup-item.u-sm-isShown {
+      display: table-cell;
+    }
+  }
+
+  @if $navigation {
+    .Navigation--hz > .Navigation-item.u-sm-isShown {
+      display: inline-block;
+    }
+  }
 }
 
 
@@ -65,6 +95,36 @@
   th.u-md-isShown {
     display: table-cell;
   }
+
+  @if $grid {
+    .Grid-cell.u-md-isShown {
+      display: inline-block;
+    }
+  }
+
+  @if $arrange {
+    .Arrange-item.u-md-isShown {
+      display: table-cell;
+    }
+  }
+
+  @if $button-group {
+    .ButtonGroup--hz > .ButtonGroup-item.u-md-isShown {
+      display: inline-block;
+    }
+  }
+
+  @if $input-group {
+    .InputGroup-item.u-md-isShown {
+      display: table-cell;
+    }
+  }
+
+  @if $navigation {
+    .Navigation--hz > .Navigation-item.u-md-isShown {
+      display: inline-block;
+    }
+  }
 }
 
 
@@ -93,6 +153,36 @@
   td.u-lg-isShown,
   th.u-lg-isShown {
     display: table-cell;
+  }
+
+  @if $grid {
+    .Grid-cell.u-lg-isShown {
+      display: inline-block;
+    }
+  }
+
+  @if $arrange {
+    .Arrange-item.u-lg-isShown {
+      display: table-cell;
+    }
+  }
+
+  @if $button-group {
+    .ButtonGroup--hz > .ButtonGroup-item.u-lg-isShown {
+      display: inline-block;
+    }
+  }
+
+  @if $input-group {
+    .InputGroup-item.u-lg-isShown {
+      display: table-cell;
+    }
+  }
+
+  @if $navigation {
+    .Navigation--hz > .Navigation-item.u-lg-isShown {
+      display: inline-block;
+    }
   }
 }
 

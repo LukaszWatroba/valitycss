@@ -44,6 +44,36 @@ th.u-isShown {
   display: table-cell;
 }
 
+@if $grid {
+  .Grid-cell.u-isShown {
+    display: inline-block;
+  }
+}
+
+@if $arrange {
+  .Arrange-item.u-isShown {
+    display: table-cell;
+  }
+}
+
+@if $button-group {
+  .ButtonGroup--hz > .ButtonGroup-item.u-isShown {
+    display: inline-block;
+  }
+}
+
+@if $input-group {
+  .InputGroup-item.u-isShown {
+    display: table-cell;
+  }
+}
+
+@if $navigation {
+  .Navigation--hz > .Navigation-item.u-isShown {
+    display: inline-block;
+  }
+}
+
 
 /* Visability */
 

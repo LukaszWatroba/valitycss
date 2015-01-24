@@ -61,14 +61,6 @@
 }
 
 
-%Button--basic {
-  padding: $padding-v-md $padding-h-md; 
-  text-align: center;
-  border: 1px solid transparent;
-  border-radius: $border-radius-md;
-}
-
-
 
 /* Button modifires
  ***************************************/
@@ -77,8 +69,10 @@
   /* Modifier: default button */
 
   .Button--default {
-    @extend %Button--basic;
-
+    padding: $padding-v-md $padding-h-md; 
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: $border-radius-md;
     background-color: $link-color;
     border-color: $link-color;
     color: $text-color-invert;

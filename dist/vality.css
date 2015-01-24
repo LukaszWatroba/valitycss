@@ -1393,17 +1393,14 @@ hr {
   opacity: 0.6;
 }
 
+/* Button modifires
+ ***************************************/
+/* Modifier: default button */
 .Button--default {
   padding: 5px 10px;
   text-align: center;
   border: 1px solid transparent;
   border-radius: 4px;
-}
-
-/* Button modifires
- ***************************************/
-/* Modifier: default button */
-.Button--default {
   background-color: #2196f3;
   border-color: #2196f3;
   color: white;
@@ -1675,7 +1672,7 @@ hr {
 /* Navigation modifires
  ***************************************/
 /* Modifier: horizontal */
-.Navigation--hz .Navigation-item {
+.Navigation--hz > .Navigation-item {
   display: inline-block;
 }
 
@@ -3851,6 +3848,26 @@ th.u-isShown {
   display: table-cell;
 }
 
+.Grid-cell.u-isShown {
+  display: inline-block;
+}
+
+.Arrange-item.u-isShown {
+  display: table-cell;
+}
+
+.ButtonGroup--hz > .ButtonGroup-item.u-isShown {
+  display: inline-block;
+}
+
+.InputGroup-item.u-isShown {
+  display: table-cell;
+}
+
+.Navigation--hz > .Navigation-item.u-isShown {
+  display: inline-block;
+}
+
 /* Visability */
 .u-isInvisible {
   visibility: hidden;
@@ -3989,6 +4006,26 @@ th.u-isShown {
   th.u-sm-isShown {
     display: table-cell;
   }
+
+  .Grid-cell.u-sm-isShown {
+    display: inline-block;
+  }
+
+  .Arrange-item.u-sm-isShown {
+    display: table-cell;
+  }
+
+  .ButtonGroup--hz > .ButtonGroup-item.u-sm-isShown {
+    display: inline-block;
+  }
+
+  .InputGroup-item.u-sm-isShown {
+    display: table-cell;
+  }
+
+  .Navigation--hz > .Navigation-item.u-sm-isShown {
+    display: inline-block;
+  }
 }
 /* Responsive: breakpoint 2 */
 @media (min-width: 48em) {
@@ -4015,6 +4052,26 @@ th.u-isShown {
   th.u-md-isShown {
     display: table-cell;
   }
+
+  .Grid-cell.u-md-isShown {
+    display: inline-block;
+  }
+
+  .Arrange-item.u-md-isShown {
+    display: table-cell;
+  }
+
+  .ButtonGroup--hz > .ButtonGroup-item.u-md-isShown {
+    display: inline-block;
+  }
+
+  .InputGroup-item.u-md-isShown {
+    display: table-cell;
+  }
+
+  .Navigation--hz > .Navigation-item.u-md-isShown {
+    display: inline-block;
+  }
 }
 /* Responsive: breakpoint 3 */
 @media (min-width: 64em) {
@@ -4040,6 +4097,26 @@ th.u-isShown {
   td.u-lg-isShown,
   th.u-lg-isShown {
     display: table-cell;
+  }
+
+  .Grid-cell.u-lg-isShown {
+    display: inline-block;
+  }
+
+  .Arrange-item.u-lg-isShown {
+    display: table-cell;
+  }
+
+  .ButtonGroup--hz > .ButtonGroup-item.u-lg-isShown {
+    display: inline-block;
+  }
+
+  .InputGroup-item.u-lg-isShown {
+    display: table-cell;
+  }
+
+  .Navigation--hz > .Navigation-item.u-lg-isShown {
+    display: inline-block;
   }
 }
 /* Responsive: print */
