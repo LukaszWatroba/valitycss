@@ -59,7 +59,6 @@ The full list of vality variables can be found [here](https://github.com/LukaszW
 - [_layout.scss](./src/utils/_layout.scss)
 - [_link.scss](./src/utils/_link.scss)
 - [_offset.scss](./src/utils/_offset.scss)
-- [_responsive.scss](./src/utils/_responsive.scss)
 - [_size.scss](./src/utils/_size.scss)
 - [_space.scss](./src/utils/_space.scss)
 - [_states.scss](./src/utils/_states.scss)

@@ -3,7 +3,8 @@
  ***************************************/
 
 
-/* Actions */
+/* Actions
+ ***************************************/
 
 .u-isActionable {
   cursor: pointer;
@@ -17,8 +18,13 @@
   cursor: move;
 }
 
+.u-isBusy {
+  cursor: progress;
+}
 
-/* Display */
+
+/* Display
+ ***************************************/
 
 .u-isHidden {
   display: none;
@@ -27,6 +33,11 @@
 
 .u-isShown {
   display: block;
+  visibility: visible;
+}
+
+.u-isShownAlt {
+  display: inline-block;
   visibility: visible;
 }
 
@@ -75,7 +86,106 @@ th.u-isShown {
 }
 
 
-/* Visability */
+@each $breakepoint in $breakepoints {
+  $min-width: nth($breakepoint, 1);
+  $name: nth($breakepoint, 2);
+  
+  /* Display (breakpoint: #{$name}) */
+
+  @media (min-width: $min-width) {
+    .u-#{$name}-isHidden {
+      display: none;
+      visibility: hidden;
+    }
+    
+    .u-#{$name}-isShown {
+      display: block;
+      visibility: visible;
+    }
+
+    .u-#{$name}-isShownAlt {
+      display: inline-block;
+      visibility: visible;
+    }
+
+    table.u-#{$name}-isShown {
+      display: table;
+    }
+
+    tr.u-#{$name}-isShown,
+    tr.u-#{$name}-isShown {
+      display: table-row;
+    }
+
+    td.u-#{$name}-isShown,
+    th.u-#{$name}-isShown {
+      display: table-cell;
+    }
+
+    @if $grid {
+      .Grid-cell.u-sm-isShown {
+        display: inline-block;
+      }
+    }
+
+    @if $arrange {
+      .Arrange-item.u-sm-isShown {
+        display: table-cell;
+      }
+    }
+
+    @if $button-group {
+      .ButtonGroup--hz > .ButtonGroup-item.u-sm-isShown {
+        display: inline-block;
+      }
+    }
+
+    @if $input-group {
+      .InputGroup-item.u-sm-isShown {
+        display: table-cell;
+      }
+    }
+
+    @if $navigation {
+      .Navigation--hz > .Navigation-item.u-sm-isShown {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+/* Display (media: print) */
+
+@media print {
+  .u-print-isHidden {
+    display: none;
+    visibility: hidden;
+  }
+  
+  .u-print-isShown {
+    display: block;
+    visibility: visible;
+  }
+
+  table.u-print-isShown {
+    display: table;
+  }
+
+  tr.u-print-isShown,
+  tr.u-print-isShown {
+    display: table-row;
+  }
+
+  td.u-print-isShown,
+  th.u-print-isShown {
+    display: table-cell;
+  }
+}
+
+
+/* Visability
+ ***************************************/
 
 .u-isInvisible {
   visibility: hidden;
@@ -86,7 +196,8 @@ th.u-isShown {
 }
 
 
-/* Opacity */
+/* Opacity
+ ***************************************/
 
 .u-isTransparent {
   opacity: 0;
@@ -97,7 +208,8 @@ th.u-isShown {
 }
 
 
-/* Visualy hidden */
+/* Visualy hidden
+ ***************************************/
 
 .u-isHiddenVisually {
   position: absolute;
@@ -108,3 +220,4 @@ th.u-isShown {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
 }
+
