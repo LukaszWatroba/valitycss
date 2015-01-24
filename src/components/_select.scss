@@ -1,3 +1,5 @@
+@if $radio {
+
 /***************************************
   Select
  ***************************************/
@@ -86,26 +88,28 @@
 /* Select madifiers
  ***************************************/
 
-/* Modifier: default select */
+@if $default-theme {
+  /* Modifier: default select */
 
-.Select--default {
-  &::before { 
-    border-radius: 0 $border-radius-md $border-radius-md 0;
-    background-color: darken($gray-light, $color-function-value);
-  }
+  .Select--default {
+    &::before { 
+      border-radius: 0 $border-radius-md $border-radius-md 0;
+      background-color: darken($gray-light, $color-function-value);
+    }
 
-  > select {
-    border-radius: $border-radius-md;
-    background-color: $gray-light;
-    border-color: $gray-light;
-    color: $text-color;
-    transition: all $duration-medium;
+    > select {
+      border-radius: $border-radius-md;
+      background-color: $gray-light;
+      border-color: $gray-light;
+      color: $text-color;
+      transition: all $duration-medium;
 
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: lighten($gray-light, $color-function-value);
-      border-color: lighten($gray-light, $color-function-value);
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: lighten($gray-light, $color-function-value);
+        border-color: lighten($gray-light, $color-function-value);
+      }
     }
   }
 }
@@ -124,4 +128,4 @@
   font-size: $font-size-sm;
 }
 
-
+}

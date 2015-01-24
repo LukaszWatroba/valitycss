@@ -1,3 +1,5 @@
+@if $input {
+
 /***************************************
   Input
  ***************************************/
@@ -40,20 +42,22 @@
 /* Input modifiers
  ***************************************/
 
-/* Modifier: default input */
+@if $default-theme {
+  /* Modifier: default input */
 
-.Input--default {
-  border-color: $gray-light;
-  padding: $padding-v-md;
-  background-color: #fff;
-  color: inherit;
-  border-radius: $border-radius-sm;
+  .Input--default {
+    border-color: $gray-light;
+    padding: $padding-v-md;
+    background-color: #fff;
+    color: inherit;
+    border-radius: $border-radius-sm;
 
-  transition: border-color $duration-short, box-shadow $duration-short;
+    transition: border-color $duration-short, box-shadow $duration-short;
 
-  &:focus {
-    border-color: $brand-info;
-    box-shadow: inset 0px 1px 1px rgba(0,0,0, 0);
+    &:focus {
+      border-color: $brand-info;
+      box-shadow: inset 0px 1px 1px rgba(0,0,0, 0);
+    }
   }
 }
 
@@ -69,4 +73,6 @@
 
 .Input--sm {
   font-size: $font-size-sm;
+}
+
 }

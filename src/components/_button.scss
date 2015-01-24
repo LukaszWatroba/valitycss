@@ -1,3 +1,5 @@
+@if $button {
+
 /***************************************
   Button
  ***************************************/
@@ -70,35 +72,37 @@
 
 /* Button modifires
  ***************************************/
-
-/* Modifier: default button */
-
-.Button--default {
-  @extend %Button--basic;
-
-  background-color: $link-color;
-  border-color: $link-color;
-  color: $text-color-invert;
-  transition: background-color $duration-short, color $duration-short, border-color $duration-short;
-
-  &.Button--sm {
-    text-transform: uppercase;
-    letter-spacing: $letter-spacing-md;
-    font-weight: $font-weight-bold;
-  }
  
-  &:hover,
-  &:focus,
-  &:active {
-    border-color: lighten($link-color, $color-function-value);
-    background-color: lighten($link-color, $color-function-value);
-    color: $text-color-invert;
-  }
+@if $default-theme {
+  /* Modifier: default button */
 
-  &.is-active {
-    background-color: darken($link-color, $color-function-value);
-    border-color: darken($link-color, $color-function-value);
+  .Button--default {
+    @extend %Button--basic;
+
+    background-color: $link-color;
+    border-color: $link-color;
     color: $text-color-invert;
+    transition: background-color $duration-short, color $duration-short, border-color $duration-short;
+
+    &.Button--sm {
+      text-transform: uppercase;
+      letter-spacing: $letter-spacing-md;
+      font-weight: $font-weight-bold;
+    }
+   
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: lighten($link-color, $color-function-value);
+      background-color: lighten($link-color, $color-function-value);
+      color: $text-color-invert;
+    }
+
+    &.is-active {
+      background-color: darken($link-color, $color-function-value);
+      border-color: darken($link-color, $color-function-value);
+      color: $text-color-invert;
+    }
   }
 }
 
@@ -126,3 +130,4 @@
   padding: 0;
 }
 
+}

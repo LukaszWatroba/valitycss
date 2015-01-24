@@ -1,3 +1,5 @@
+@if $checkbox {
+
 /***************************************
   Checkbox
  ***************************************/
@@ -75,26 +77,30 @@
 /* Checkbox modifiers
  ***************************************/
 
-/* Modifier: default checkbox */
+@if $default-theme {
+  /* Modifier: default checkbox */
 
-.Checkbox--default {
-  > label::before {
-    background-color: $gray-light;
-    border-color: $gray-light;
-    color: $text-color;
-    transition: all $duration-short;
-  }
+  .Checkbox--default {
+    > label::before {
+      background-color: $gray-light;
+      border-color: $gray-light;
+      color: $text-color;
+      transition: all $duration-short;
+    }
 
-  > label:hover::before,
-  > input:focus + label::before,
-  > input:active + label::before, {
-    border-color: lighten($gray-light, $color-function-value);
-    background-color: lighten($gray-light, $color-function-value);
-  }
+    > label:hover::before,
+    > input:focus + label::before,
+    > input:active + label::before, {
+      border-color: lighten($gray-light, $color-function-value);
+      background-color: lighten($gray-light, $color-function-value);
+    }
 
-  > input[type=checkbox]:checked + label:before {
-    border-color: $brand-success;
-    background-color: $brand-success;
-    color: $text-color-invert;
+    > input[type=checkbox]:checked + label:before {
+      border-color: $brand-success;
+      background-color: $brand-success;
+      color: $text-color-invert;
+    }
   }
+}
+
 }

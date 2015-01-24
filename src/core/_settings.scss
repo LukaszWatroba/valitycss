@@ -3,6 +3,27 @@
 // -------------------------------------
 
 
+// Conditions
+// -------------------------------------
+
+$arrange:         true;
+$button:          true;
+$button-group:    true;
+$checkbox:        true;
+$flex-embed:      true;
+$form:            true;
+$grid:            true;
+$input-group:     true;
+$input:           true;
+$navigation:      true;
+$radio:           true;
+$select:          true;
+$spinner:         true;
+$table:           true;
+
+$default-theme:   true;
+
+
 // Colors
 // -------------------------------------
 
@@ -34,7 +55,6 @@ $link-color:            $brand-primary !default;
 // Selection
 $selection-color:       inherit;
 $selection-background:  rgba(red($link-color), green($link-color), blue($link-color), .5);
-
 
 
 // Content

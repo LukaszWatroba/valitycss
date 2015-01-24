@@ -1,3 +1,5 @@
+@if $spinner {
+
 /***************************************
   Spinner
  ***************************************/
@@ -35,11 +37,13 @@
 /* Spinner modifiers
  ***************************************/
 
-/* Modifier: default spinner */
+@if $default-theme {
+  /* Modifier: default spinner */
 
-.Spinner--default {
-  border-top-color: $brand-success;
-  border-left-color: $brand-success;
+  .Spinner--default {
+    border-top-color: $brand-success;
+    border-left-color: $brand-success;
+  }
 }
 
 /* Modifier: large spinner */
@@ -56,4 +60,6 @@
   width: 11px;
   height: 11px;
   border-width: 1px;
+}
+
 }
