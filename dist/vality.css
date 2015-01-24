@@ -1682,11 +1682,11 @@ hr {
 /**
  * Example HTML:
  *
-  <div class="FlexEmbed [FlexEmbed--modifier]">
+  <div class="FlexEmbed [FlexEmbed--aspectratio]">
     <iframe class="FlexEmbed-item" src="…"></iframe>
   </div>
  
-  <div class="FlexEmbed [FlexEmbed--modifier]">
+  <div class="FlexEmbed [FlexEmbed--aspectratio]">
     [iframe|object|embed]
   </div>
  */
@@ -1713,8 +1713,6 @@ hr {
   width: 100%;
 }
 
-/* FlexEmbed modifires
- ***************************************/
 /* FlexEmbed (aspect ratio: 1by1) */
 .FlexEmbed--1by1::before {
   padding-bottom: 100%;

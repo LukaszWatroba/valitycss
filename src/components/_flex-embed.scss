@@ -8,11 +8,11 @@
 /**
  * Example HTML:
  *
-  <div class="FlexEmbed [FlexEmbed--modifier]">
+  <div class="FlexEmbed [FlexEmbed--aspectratio]">
     <iframe class="FlexEmbed-item" src="…"></iframe>
   </div>
  
-  <div class="FlexEmbed [FlexEmbed--modifier]">
+  <div class="FlexEmbed [FlexEmbed--aspectratio]">
     [iframe|object|embed]
   </div>
  */
@@ -42,10 +42,6 @@
   width: 100%;
 }
 
-
-
-/* FlexEmbed modifires
- ***************************************/
 
 @each $aspect-ratio in $aspect-ratios {
   $value: nth($aspect-ratio, 1);
