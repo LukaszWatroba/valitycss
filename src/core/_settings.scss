@@ -164,6 +164,17 @@ $size-9of10:   9 / 10 * 100%;
 $size-11of12:  11 / 12 * 100%;
 
 
+// Aspect Ratios
+// -------------------------------------
+
+$aspect-ratio-1by1:   100%;
+$aspect-ratio-2by1:   1 / 2 * 100%;
+$aspect-ratio-3by1:   1 / 3 * 100%;
+$aspect-ratio-4by3:   3 / 4 * 100%;
+$aspect-ratio-16by9:  9 / 16 * 100%;
+
+$aspect-ratios:  $aspect-ratio-1by1 '1by1', $aspect-ratio-2by1 '2by1', $aspect-ratio-3by1 '3by1', $aspect-ratio-4by3 '4by3', $aspect-ratio-16by9 '16by9';
+
 
 // Duration
 // -------------------------------------

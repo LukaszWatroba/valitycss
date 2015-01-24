@@ -8,7 +8,7 @@
 /**
  * Example HTML:
  * 
-  <div class="ButtonGroup [ButtonGroup--hz|ButtonGroup--borderCollapse]">
+  <div class="ButtonGroup [ButtonGroup--hz|ButtonGroup--collapse]">
     <div class="ButtonGroup-item">
       [content]
     </div>
@@ -56,26 +56,26 @@
 }
 
 
-/* Modifier: horizontal collapse */
+/* Modifier: vertical collapse */
 
-.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item {
+.ButtonGroup--collapse:not(.ButtonGroup--hz) > .ButtonGroup-item {
   margin-top: -1px;
 }
 
-.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:first-child {
+.ButtonGroup--collapse:not(.ButtonGroup--hz) > .ButtonGroup-item:first-child {
   margin-top: 0;
 }
 
-.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:not(:first-child):not(:last-child) > .Button {
+.ButtonGroup--collapse:not(.ButtonGroup--hz) > .ButtonGroup-item:not(:first-child):not(:last-child) > .Button {
   border-radius: 0;
 }
 
-.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:first-child:not(:only-child) > .Button {
+.ButtonGroup--collapse:not(.ButtonGroup--hz) > .ButtonGroup-item:first-child:not(:only-child) > .Button {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:last-child:not(:only-child) > .Button {
+.ButtonGroup--collapse:not(.ButtonGroup--hz) > .ButtonGroup-item:last-child:not(:only-child) > .Button {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -83,24 +83,24 @@
 
 /* Modifier: horizontal collapse */
 
-.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item {
+.ButtonGroup--collapse.ButtonGroup--hz > .ButtonGroup-item {
   margin-left: -1px;
 }
 
-.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:first-child {
+.ButtonGroup--collapse.ButtonGroup--hz > .ButtonGroup-item:first-child {
   margin-left: 0;
 }
 
-.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:not(:first-child):not(:last-child) > .Button {
+.ButtonGroup--collapse.ButtonGroup--hz > .ButtonGroup-item:not(:first-child):not(:last-child) > .Button {
   border-radius: 0;
 }
 
-.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:first-child:not(:only-child) > .Button {
+.ButtonGroup--collapse.ButtonGroup--hz > .ButtonGroup-item:first-child:not(:only-child) > .Button {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:last-child:not(:only-child) > .Button {
+.ButtonGroup--collapse.ButtonGroup--hz > .ButtonGroup-item:last-child:not(:only-child) > .Button {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }

@@ -98,31 +98,31 @@
 
 /* Modifier: collapse borders */
 
-.InputGroup--borderCollapse .InputGroup-item:not(:first-child):not(:last-child) > .Input,
-.InputGroup--borderCollapse .InputGroup-item:not(:first-child):not(:last-child) > .Button
-.InputGroup--borderCollapse .InputGroup-item:not(:first-child):not(:last-child) > .InputGroup-addon, {
+.InputGroup--collapse .InputGroup-item:not(:first-child):not(:last-child) > .Input,
+.InputGroup--collapse .InputGroup-item:not(:first-child):not(:last-child) > .Button
+.InputGroup--collapse .InputGroup-item:not(:first-child):not(:last-child) > .InputGroup-addon, {
   border-radius: 0;
 }
 
-.InputGroup--borderCollapse .InputGroup-item:first-child > .Input,
-.InputGroup--borderCollapse .InputGroup-item:first-child > .Button,
-.InputGroup--borderCollapse .InputGroup-item:first-child > .InputGroup-addon {
+.InputGroup--collapse .InputGroup-item:first-child > .Input,
+.InputGroup--collapse .InputGroup-item:first-child > .Button,
+.InputGroup--collapse .InputGroup-item:first-child > .InputGroup-addon {
   @include border-right-radius(0);
 }
 
-.InputGroup--borderCollapse .InputGroup-item:last-child > .Input,
-.InputGroup--borderCollapse .InputGroup-item:last-child > .Button,
-.InputGroup--borderCollapse .InputGroup-item:last-child > .InputGroup-addon {
+.InputGroup--collapse .InputGroup-item:last-child > .Input,
+.InputGroup--collapse .InputGroup-item:last-child > .Button,
+.InputGroup--collapse .InputGroup-item:last-child > .InputGroup-addon {
   @include border-left-radius(0);
 }
 
-.InputGroup--borderCollapse .InputGroup-item:first-child > .Button,
-.InputGroup--borderCollapse .InputGroup-item:first-child > .InputGroup-addon {
+.InputGroup--collapse .InputGroup-item:first-child > .Button,
+.InputGroup--collapse .InputGroup-item:first-child > .InputGroup-addon {
   margin-right: -1px;
 }
 
-.InputGroup--borderCollapse .InputGroup-item:last-child > .Button,
-.InputGroup--borderCollapse .InputGroup-item:last-child > .InputGroup-addon {
+.InputGroup--collapse .InputGroup-item:last-child > .Button,
+.InputGroup--collapse .InputGroup-item:last-child > .InputGroup-addon {
   margin-left: -1px;
 }
 

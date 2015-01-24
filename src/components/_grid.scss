@@ -17,7 +17,7 @@
 /**
  * Example HTML:
  * 
-  <div class="Grid [Grid--alignCenter|Grid--alignRight]">
+  <div class="Grid [Grid--modifier]">
     <div class="Grid-cell u-size2of8"></div>
     <div class="Grid-cell u-size2of8"></div>
     <div class="Grid-cell u-size2of8"></div>
@@ -35,19 +35,19 @@
   font-size: 0;
 }
 
-.Grid--alignCenter {
+.Grid--center {
   text-align: center;
 }
 
-.Grid--alignRight {
+.Grid--right {
   text-align: right;
 }
 
-.Grid--alignMiddle > .Grid-cell {
+.Grid--middle > .Grid-cell {
   vertical-align: middle;
 }
 
-.Grid--alignBottom > .Grid-cell {
+.Grid--bottom > .Grid-cell {
   vertical-align: bottom;
 }
 
@@ -62,7 +62,7 @@
   padding: 0;
   text-align: left;
   vertical-align: top;
-  width: 100%;
+  width: $size-full;
 }
 
 .Grid-cell--center {
@@ -74,86 +74,44 @@
 /* Grid (default) */
 
 .Grid--2col > .Grid-cell {
-  width: 50%;
+  width: $size-1of2;
 }
 
 .Grid--3col > .Grid-cell {
-  width: 33.333333%;
+  width: $size-1of3;
 }
 
 .Grid--4col > .Grid-cell {
-  width: 25%;
+  width: $size-1of4;
 }
 
 
-/* Grid (at first breakpoint) */
+@each $breakepoint in $breakepoints {
+  $min-width: nth($breakepoint, 1);
+  $name: nth($breakepoint, 2);
 
-@media (min-width: $screen-sm) {
+  /* Grid (breakpoint: #{$name}) */
 
-  .sm-Grid--1col > .Grid-cell {
-    width: 100%;
+  @media (min-width: $screen-sm) {
+
+    .#{$name}-Grid--1col > .Grid-cell {
+      width: $size-full;
+    }
+
+    .#{$name}-Grid--2col > .Grid-cell {
+      width: $size-1of2;
+    }
+
+    .#{$name}-Grid--3col > .Grid-cell {
+      width: $size-1of3;
+    }
+
+    .#{$name}-Grid--4col > .Grid-cell {
+      width: $size-1of4;
+    }
+
   }
-
-  .sm-Grid--2col > .Grid-cell {
-    width: 50%;
-  }
-
-  .sm-Grid--3col > .Grid-cell {
-    width: 33.333333%;
-  }
-
-  .sm-Grid--4col > .Grid-cell {
-    width: 25%;
-  }
-
 }
-
-
-/* Grid (at second breakpoint) */
-
-@media (min-width: $screen-md) {
-
-  .md-Grid--1col > .Grid-cell {
-    width: 100%;
-  }
-
-  .md-Grid--2col > .Grid-cell {
-    width: 50%;
-  }
-
-  .md-Grid--3col > .Grid-cell {
-    width: 33.333333%;
-  }
-
-  .md-Grid--4col > .Grid-cell {
-    width: 25%;
-  }
-
-}
-
-
-/* Grid (at last breakpoint) */
-
-@media (min-width: $screen-lg) {
-
-  .lg-Grid--1col > .Grid-cell {
-    width: 100%;
-  }
-
-  .lg-Grid--2col > .Grid-cell {
-    width: 50%;
-  }
-
-  .lg-Grid--3col > .Grid-cell {
-    width: 33.333333%;
-  }
-
-  .lg-Grid--4col > .Grid-cell {
-    width: 25%;
-  }
-
-}
-
 
 
 /* Grid modifiers
@@ -161,12 +119,13 @@
 
 /* Gutter modifier */
 
-.Grid--withGutters {
+.Grid--gutters {
   margin: 0 (-$grid-gutter-md);
 }
 
-.Grid--withGutters > .Grid-cell {
+.Grid--gutters > .Grid-cell {
   padding: 0 $grid-gutter-md;
 }
+
 
 }

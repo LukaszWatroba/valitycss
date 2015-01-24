@@ -1,6 +1,6 @@
 /**
  * ValityCss - Sass-based, minimalist and scalable framework.
- * @version v0.2.0 - 2015-01-24
+ * @version v0.3.0 - 2015-01-24
  * @link http://lukaszwatroba.github.io/valitycss
  * @author Łukasz Wątroba <l@lukaszwatroba.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -673,7 +673,7 @@ hr {
 /**
  * Example HTML:
  * 
-  <div class="Grid [Grid--alignCenter|Grid--alignRight]">
+  <div class="Grid [Grid--modifier]">
     <div class="Grid-cell u-size2of8"></div>
     <div class="Grid-cell u-size2of8"></div>
     <div class="Grid-cell u-size2of8"></div>
@@ -688,19 +688,19 @@ hr {
   font-size: 0;
 }
 
-.Grid--alignCenter {
+.Grid--center {
   text-align: center;
 }
 
-.Grid--alignRight {
+.Grid--right {
   text-align: right;
 }
 
-.Grid--alignMiddle > .Grid-cell {
+.Grid--middle > .Grid-cell {
   vertical-align: middle;
 }
 
-.Grid--alignBottom > .Grid-cell {
+.Grid--bottom > .Grid-cell {
   vertical-align: bottom;
 }
 
@@ -727,14 +727,14 @@ hr {
 }
 
 .Grid--3col > .Grid-cell {
-  width: 33.333333%;
+  width: 33.33333%;
 }
 
 .Grid--4col > .Grid-cell {
   width: 25%;
 }
 
-/* Grid (at first breakpoint) */
+/* Grid (breakpoint: sm) */
 @media (min-width: 20em) {
   .sm-Grid--1col > .Grid-cell {
     width: 100%;
@@ -745,15 +745,15 @@ hr {
   }
 
   .sm-Grid--3col > .Grid-cell {
-    width: 33.333333%;
+    width: 33.33333%;
   }
 
   .sm-Grid--4col > .Grid-cell {
     width: 25%;
   }
 }
-/* Grid (at second breakpoint) */
-@media (min-width: 48em) {
+/* Grid (breakpoint: md) */
+@media (min-width: 20em) {
   .md-Grid--1col > .Grid-cell {
     width: 100%;
   }
@@ -763,15 +763,15 @@ hr {
   }
 
   .md-Grid--3col > .Grid-cell {
-    width: 33.333333%;
+    width: 33.33333%;
   }
 
   .md-Grid--4col > .Grid-cell {
     width: 25%;
   }
 }
-/* Grid (at last breakpoint) */
-@media (min-width: 64em) {
+/* Grid (breakpoint: lg) */
+@media (min-width: 20em) {
   .lg-Grid--1col > .Grid-cell {
     width: 100%;
   }
@@ -781,7 +781,7 @@ hr {
   }
 
   .lg-Grid--3col > .Grid-cell {
-    width: 33.333333%;
+    width: 33.33333%;
   }
 
   .lg-Grid--4col > .Grid-cell {
@@ -791,11 +791,11 @@ hr {
 /* Grid modifiers
  ***************************************/
 /* Gutter modifier */
-.Grid--withGutters {
+.Grid--gutters {
   margin: 0 -15px;
 }
 
-.Grid--withGutters > .Grid-cell {
+.Grid--gutters > .Grid-cell {
   padding: 0 15px;
 }
 
@@ -1046,33 +1046,33 @@ hr {
 }
 
 /* Modifier: collapse borders */
-.InputGroup--borderCollapse .InputGroup-item:not(:first-child):not(:last-child) > .Input,
-.InputGroup--borderCollapse .InputGroup-item:not(:first-child):not(:last-child) > .Button
-.InputGroup--borderCollapse .InputGroup-item:not(:first-child):not(:last-child) > .InputGroup-addon {
+.InputGroup--collapse .InputGroup-item:not(:first-child):not(:last-child) > .Input,
+.InputGroup--collapse .InputGroup-item:not(:first-child):not(:last-child) > .Button
+.InputGroup--collapse .InputGroup-item:not(:first-child):not(:last-child) > .InputGroup-addon {
   border-radius: 0;
 }
 
-.InputGroup--borderCollapse .InputGroup-item:first-child > .Input,
-.InputGroup--borderCollapse .InputGroup-item:first-child > .Button,
-.InputGroup--borderCollapse .InputGroup-item:first-child > .InputGroup-addon {
+.InputGroup--collapse .InputGroup-item:first-child > .Input,
+.InputGroup--collapse .InputGroup-item:first-child > .Button,
+.InputGroup--collapse .InputGroup-item:first-child > .InputGroup-addon {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.InputGroup--borderCollapse .InputGroup-item:last-child > .Input,
-.InputGroup--borderCollapse .InputGroup-item:last-child > .Button,
-.InputGroup--borderCollapse .InputGroup-item:last-child > .InputGroup-addon {
+.InputGroup--collapse .InputGroup-item:last-child > .Input,
+.InputGroup--collapse .InputGroup-item:last-child > .Button,
+.InputGroup--collapse .InputGroup-item:last-child > .InputGroup-addon {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 
-.InputGroup--borderCollapse .InputGroup-item:first-child > .Button,
-.InputGroup--borderCollapse .InputGroup-item:first-child > .InputGroup-addon {
+.InputGroup--collapse .InputGroup-item:first-child > .Button,
+.InputGroup--collapse .InputGroup-item:first-child > .InputGroup-addon {
   margin-right: -1px;
 }
 
-.InputGroup--borderCollapse .InputGroup-item:last-child > .Button,
-.InputGroup--borderCollapse .InputGroup-item:last-child > .InputGroup-addon {
+.InputGroup--collapse .InputGroup-item:last-child > .Button,
+.InputGroup--collapse .InputGroup-item:last-child > .InputGroup-addon {
   margin-left: -1px;
 }
 
@@ -1446,7 +1446,7 @@ hr {
 /**
  * Example HTML:
  * 
-  <div class="ButtonGroup [ButtonGroup--hz|ButtonGroup--borderCollapse]">
+  <div class="ButtonGroup [ButtonGroup--hz|ButtonGroup--collapse]">
     <div class="ButtonGroup-item">
       [content]
     </div>
@@ -1482,48 +1482,48 @@ hr {
   display: inline-block;
 }
 
-/* Modifier: horizontal collapse */
-.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item {
+/* Modifier: vertical collapse */
+.ButtonGroup--collapse:not(.ButtonGroup--hz) > .ButtonGroup-item {
   margin-top: -1px;
 }
 
-.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:first-child {
+.ButtonGroup--collapse:not(.ButtonGroup--hz) > .ButtonGroup-item:first-child {
   margin-top: 0;
 }
 
-.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:not(:first-child):not(:last-child) > .Button {
+.ButtonGroup--collapse:not(.ButtonGroup--hz) > .ButtonGroup-item:not(:first-child):not(:last-child) > .Button {
   border-radius: 0;
 }
 
-.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:first-child:not(:only-child) > .Button {
+.ButtonGroup--collapse:not(.ButtonGroup--hz) > .ButtonGroup-item:first-child:not(:only-child) > .Button {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.ButtonGroup--borderCollapse:not(.ButtonGroup--hz) > .ButtonGroup-item:last-child:not(:only-child) > .Button {
+.ButtonGroup--collapse:not(.ButtonGroup--hz) > .ButtonGroup-item:last-child:not(:only-child) > .Button {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
 /* Modifier: horizontal collapse */
-.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item {
+.ButtonGroup--collapse.ButtonGroup--hz > .ButtonGroup-item {
   margin-left: -1px;
 }
 
-.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:first-child {
+.ButtonGroup--collapse.ButtonGroup--hz > .ButtonGroup-item:first-child {
   margin-left: 0;
 }
 
-.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:not(:first-child):not(:last-child) > .Button {
+.ButtonGroup--collapse.ButtonGroup--hz > .ButtonGroup-item:not(:first-child):not(:last-child) > .Button {
   border-radius: 0;
 }
 
-.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:first-child:not(:only-child) > .Button {
+.ButtonGroup--collapse.ButtonGroup--hz > .ButtonGroup-item:first-child:not(:only-child) > .Button {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.ButtonGroup--borderCollapse.ButtonGroup--hz > .ButtonGroup-item:last-child:not(:only-child) > .Button {
+.ButtonGroup--collapse.ButtonGroup--hz > .ButtonGroup-item:last-child:not(:only-child) > .Button {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -1715,29 +1715,29 @@ hr {
 
 /* FlexEmbed modifires
  ***************************************/
-/* Modifier: 1:1 aspect ratio */
+/* FlexEmbed (aspect ratio: 1by1) */
 .FlexEmbed--1by1::before {
   padding-bottom: 100%;
 }
 
-/* Modifier: 3:1 aspect ratio */
-.FlexEmbed--3by1::before {
-  padding-bottom: 33.333333%;
-}
-
-/* Modifier: 2:1 aspect ratio */
+/* FlexEmbed (aspect ratio: 2by1) */
 .FlexEmbed--2by1::before {
   padding-bottom: 50%;
 }
 
-/* Modifier: 16:9 aspect ratio */
-.FlexEmbed--16by9::before {
-  padding-bottom: 56.25%;
+/* FlexEmbed (aspect ratio: 3by1) */
+.FlexEmbed--3by1::before {
+  padding-bottom: 33.33333%;
 }
 
-/* Modifier: 4:3 aspect ratio */
+/* FlexEmbed (aspect ratio: 4by3) */
 .FlexEmbed--4by3::before {
   padding-bottom: 75%;
+}
+
+/* FlexEmbed (aspect ratio: 16by9) */
+.FlexEmbed--16by9::before {
+  padding-bottom: 56.25%;
 }
 
 /***************************************
