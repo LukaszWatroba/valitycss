@@ -6,22 +6,22 @@
 // Conditions
 // -------------------------------------
 
-$arrange:         true;
-$button:          true;
-$button-group:    true;
-$checkbox:        true;
-$flex-embed:      true;
-$form:            true;
-$grid:            true;
-$input-group:     true;
-$input:           true;
-$navigation:      true;
-$radio:           true;
-$select:          true;
-$spinner:         true;
-$table:           true;
+$arrange:         true !default;
+$button:          true !default;
+$button-group:    true !default;
+$checkbox:        true !default;
+$flex-embed:      true !default;
+$form:            true !default;
+$grid:            true !default;
+$input-group:     true !default;
+$input:           true !default;
+$navigation:      true !default;
+$radio:           true !default;
+$select:          true !default;
+$spinner:         true !default;
+$table:           true !default;
 
-$default-theme:   true;
+$default-theme:   true !default;
 
 
 // Colors
@@ -39,34 +39,34 @@ $brand-primary:         #2196F3 !default;   // Blue
 $brand-secondary:       #F44336 !default;   // Red
 $brand-tertiary:        #4CAF50 !default;   // Green
 
-$brand-info:            $brand-primary !default;
-$brand-error:           $brand-secondary !default;
-$brand-success:         $brand-tertiary !default;
+$brand-info:            $brand-primary    !default;
+$brand-error:           $brand-secondary  !default;
+$brand-success:         $brand-tertiary   !default;
 
 // Default colors
-$body-background:       white !default;
-$text-color:            $gray-darker !default;
-$text-color-light:      darken($gray-light, 12%);
-$text-color-invert:     white;
+$body-background:       white                    !default;
+$text-color:            $gray-darker             !default;
+$text-color-light:      darken($gray-light, 12%) !default;
+$text-color-invert:     white                    !default;
 
 // Links
 $link-color:            $brand-primary !default;
 
 // Selection
-$selection-color:       inherit;
-$selection-background:  rgba(red($link-color), green($link-color), blue($link-color), .5);
+$selection-color:       inherit !default;
+$selection-background:  rgba(red($link-color), green($link-color), blue($link-color), .5) !default;
 
 
 // Content
 // -------------------------------------
 
-$type-scale:              1.414;
+$type-scale:              1.414 !default;
 
 $font-family-sans:        'Lato', sans-serif !default;
-$font-family-serif:       'Georgia', serif !default;
-$font-family-mono:        monospace, serif !default;
+$font-family-serif:       'Georgia', serif   !default;
+$font-family-mono:        monospace, serif   !default;
 
-$font-size-md:            1em !default;
+$font-size-md:            1em     !default;
 $font-size-lg:            1.414em !default;
 $font-size-sm:            0.707em !default;
 
@@ -76,20 +76,20 @@ $font-weight-light:       100 !default;
 
 $line-height-lg:          1.618em !default;
 $line-height-md:          1.414em !default;
-$line-height-sm:          1.2em !default;
+$line-height-sm:          1.2em   !default;
 
 $letter-spacing-md:       0.075em !default;
-$letter-spacing-sm:       0.05em !default;
-$letter-spacing-lg:       0.15em !default;
+$letter-spacing-sm:       0.05em  !default;
+$letter-spacing-lg:       0.15em  !default;
 
-$font-smoothing:          subpixel-antialiased; // antialiased; none;
+$font-smoothing:          subpixel-antialiased !default; // antialiased; none;
 
 
 // Paddings
 // -------------------------------------
 
 $padding-h-md:       10px !default;
-$padding-v-md:       5px !default;
+$padding-v-md:       5px  !default;
 
 $padding-h-sm:       $padding-h-md / 2 !default;
 $padding-v-sm:       $padding-v-md / 2 !default;
@@ -108,16 +108,16 @@ $font-size-h3:            1.999em !default;
 $font-size-h2:            2.827em !default;
 $font-size-h1:            3.998em !default;
 
-$headings-font-family:    $font-family-sans !default;
+$headings-font-family:    $font-family-sans   !default;
 $headings-font-weight:    $font-weight-normal !default;
-$headings-line-height:    $line-height-sm !default;
-$headings-text-color:     inherit !default;
+$headings-line-height:    $line-height-sm     !default;
+$headings-text-color:     inherit             !default;
 
 
 // Spacing
 // -------------------------------------
 
-$space-md:      20px !default;
+$space-md:      20px          !default;
 $space-sm:      $space-md / 2 !default;
 $space-lg:      $space-md * 2 !default;
 
@@ -132,55 +132,14 @@ $screen-lg:           64em !default;
 $screen-sm-half:      $screen-sm + (($screen-md - $screen-sm) / 2) !default;
 $screen-md-half:      $screen-md + (($screen-lg - $screen-md) / 2) !default;
 
-$breakepoints:        $screen-sm 'sm', $screen-md 'md', $screen-lg 'lg';
-
-
-// Sizes
-// -------------------------------------
-
-$size-full:    100%;
-$size-1of12:   1 / 12 * 100%;
-$size-1of10:   1 / 10 * 100%;
-$size-1of8:    1 / 8 * 100%;
-$size-1of6:    1 / 6 * 100%;
-$size-1of5:    1 / 5 * 100%;
-$size-1of4:    1 / 4 * 100%;
-$size-1of3:    1 / 3 * 100%;
-$size-3of10:   3 / 10 * 100%;
-$size-3of8:    3 / 8 * 100%;
-$size-2of5:    2 / 5 * 100%;
-$size-5of12:   5 / 12 * 100%;
-$size-1of2:    1 / 2 * 100%;
-$size-7of12:   7 / 12 * 100%;
-$size-3of5:    3 / 5 * 100%;
-$size-5of8:    5 / 8 * 100%;
-$size-2of3:    2 / 3 * 100%;
-$size-7of10:   7 / 10 * 100%;
-$size-3of4:    3 / 4 * 100%;
-$size-4of5:    4 / 5 * 100%;
-$size-5of6:    5 / 6 * 100%;
-$size-7of8:    7 / 8 * 100%;
-$size-9of10:   9 / 10 * 100%;
-$size-11of12:  11 / 12 * 100%;
-
-
-// Aspect Ratios
-// -------------------------------------
-
-$aspect-ratio-1by1:   100%;
-$aspect-ratio-2by1:   1 / 2 * 100%;
-$aspect-ratio-3by1:   1 / 3 * 100%;
-$aspect-ratio-4by3:   3 / 4 * 100%;
-$aspect-ratio-16by9:  9 / 16 * 100%;
-
-$aspect-ratios:  $aspect-ratio-1by1 '1by1', $aspect-ratio-2by1 '2by1', $aspect-ratio-3by1 '3by1', $aspect-ratio-4by3 '4by3', $aspect-ratio-16by9 '16by9';
+$breakepoints:        $screen-sm 'sm', $screen-md 'md', $screen-lg 'lg' !default;
 
 
 // Duration
 // -------------------------------------
 
 $duration-medium:       0.5s !default;
-$duration-short:        $duration-medium / 2;
+$duration-short:        $duration-medium / 2 !default;
 $duration-long:         $duration-medium * 2 !default;
 
 
@@ -209,20 +168,20 @@ $border-radius-lg:       6px !default;
 // Hr
 // -------------------------------------
 
-$hr-border-color:        $gray-lighter;
+$hr-border-color:        $gray-lighter !default;
 $hr-border:              1px solid $hr-border-color !default;
 
 
 // Form 
 // -------------------------------------
 
-$input-multiple-size:         20px !default;
+$input-multiple-size:    20px !default;
 
 
 // Table
 // -------------------------------------
 
-$table-border:              1px solid $hr-border-color !default;
+$table-border:           1px solid $hr-border-color !default;
 
 
 // Easing
@@ -233,9 +192,50 @@ $ease-in-quint:        cubic-bezier(0.755, 0.050, 0.855, 0.060);
 $ease-in-out-quint:    cubic-bezier(0.860, 0.000, 0.070, 1.000);
 
 
+// Sizes
+// -------------------------------------
+
+$size-full:    100%           !default;
+$size-1of12:   1 / 12 * 100%  !default;
+$size-1of10:   1 / 10 * 100%  !default;
+$size-1of8:    1 / 8 * 100%   !default;
+$size-1of6:    1 / 6 * 100%   !default;
+$size-1of5:    1 / 5 * 100%   !default;
+$size-1of4:    1 / 4 * 100%   !default;
+$size-1of3:    1 / 3 * 100%   !default;
+$size-3of10:   3 / 10 * 100%  !default;
+$size-3of8:    3 / 8 * 100%   !default;
+$size-2of5:    2 / 5 * 100%   !default;
+$size-5of12:   5 / 12 * 100%  !default;
+$size-1of2:    1 / 2 * 100%   !default;
+$size-7of12:   7 / 12 * 100%  !default;
+$size-3of5:    3 / 5 * 100%   !default;
+$size-5of8:    5 / 8 * 100%   !default;
+$size-2of3:    2 / 3 * 100%   !default;
+$size-7of10:   7 / 10 * 100%  !default;
+$size-3of4:    3 / 4 * 100%   !default;
+$size-4of5:    4 / 5 * 100%   !default;
+$size-5of6:    5 / 6 * 100%   !default;
+$size-7of8:    7 / 8 * 100%   !default;
+$size-9of10:   9 / 10 * 100%  !default;
+$size-11of12:  11 / 12 * 100% !default;
+
+
+// Aspect Ratios
+// -------------------------------------
+
+$aspect-ratio-1by1:   100%          !default;
+$aspect-ratio-2by1:   1 / 2 * 100%  !default;
+$aspect-ratio-3by1:   1 / 3 * 100%  !default;
+$aspect-ratio-4by3:   3 / 4 * 100%  !default;
+$aspect-ratio-16by9:  9 / 16 * 100% !default;
+
+$aspect-ratios:  $aspect-ratio-1by1 '1by1', $aspect-ratio-2by1 '2by1', $aspect-ratio-3by1 '3by1', $aspect-ratio-4by3 '4by3', $aspect-ratio-16by9 '16by9' !default;
+
+
 // Other
 // -------------------------------------
 
 $disabled-opacity:        0.6 !default;
-$color-function-value:    6% !default;
+$color-function-value:    6%  !default;
 
