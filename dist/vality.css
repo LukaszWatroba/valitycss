@@ -1,6 +1,6 @@
 /**
  * ValityCss - Sass-based, minimalist and scalable framework.
- * @version v0.3.1 - 2015-01-24
+ * @version v0.3.2 - 2015-01-26
  * @link http://lukaszwatroba.github.io/valitycss
  * @author Łukasz Wątroba <l@lukaszwatroba.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -753,7 +753,7 @@ hr {
   }
 }
 /* Grid (breakpoint: md) */
-@media (min-width: 20em) {
+@media (min-width: 48em) {
   .md-Grid--1col > .Grid-cell {
     width: 100%;
   }
@@ -771,7 +771,7 @@ hr {
   }
 }
 /* Grid (breakpoint: lg) */
-@media (min-width: 20em) {
+@media (min-width: 64em) {
   .lg-Grid--1col > .Grid-cell {
     width: 100%;
   }
@@ -3971,23 +3971,23 @@ th.u-isShown {
     display: table-cell;
   }
 
-  .Grid-cell.u-sm-isShown {
+  .Grid-cell.u-md-isShown {
     display: inline-block;
   }
 
-  .Arrange-item.u-sm-isShown {
+  .Arrange-item.u-md-isShown {
     display: table-cell;
   }
 
-  .ButtonGroup--hz > .ButtonGroup-item.u-sm-isShown {
+  .ButtonGroup--hz > .ButtonGroup-item.u-md-isShown {
     display: inline-block;
   }
 
-  .InputGroup-item.u-sm-isShown {
+  .InputGroup-item.u-md-isShown {
     display: table-cell;
   }
 
-  .Navigation--hz > .Navigation-item.u-sm-isShown {
+  .Navigation--hz > .Navigation-item.u-md-isShown {
     display: inline-block;
   }
 }
@@ -4022,23 +4022,23 @@ th.u-isShown {
     display: table-cell;
   }
 
-  .Grid-cell.u-sm-isShown {
+  .Grid-cell.u-lg-isShown {
     display: inline-block;
   }
 
-  .Arrange-item.u-sm-isShown {
+  .Arrange-item.u-lg-isShown {
     display: table-cell;
   }
 
-  .ButtonGroup--hz > .ButtonGroup-item.u-sm-isShown {
+  .ButtonGroup--hz > .ButtonGroup-item.u-lg-isShown {
     display: inline-block;
   }
 
-  .InputGroup-item.u-sm-isShown {
+  .InputGroup-item.u-lg-isShown {
     display: table-cell;
   }
 
-  .Navigation--hz > .Navigation-item.u-sm-isShown {
+  .Navigation--hz > .Navigation-item.u-lg-isShown {
     display: inline-block;
   }
 }
