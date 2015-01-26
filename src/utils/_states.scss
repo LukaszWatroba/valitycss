@@ -123,31 +123,31 @@ th.u-isShown {
     }
 
     @if $grid {
-      .Grid-cell.u-sm-isShown {
+      .Grid-cell.u-#{$name}-isShown {
         display: inline-block;
       }
     }
 
     @if $arrange {
-      .Arrange-item.u-sm-isShown {
+      .Arrange-item.u-#{$name}-isShown {
         display: table-cell;
       }
     }
 
     @if $button-group {
-      .ButtonGroup--hz > .ButtonGroup-item.u-sm-isShown {
+      .ButtonGroup--hz > .ButtonGroup-item.u-#{$name}-isShown {
         display: inline-block;
       }
     }
 
     @if $input-group {
-      .InputGroup-item.u-sm-isShown {
+      .InputGroup-item.u-#{$name}-isShown {
         display: table-cell;
       }
     }
 
     @if $navigation {
-      .Navigation--hz > .Navigation-item.u-sm-isShown {
+      .Navigation--hz > .Navigation-item.u-#{$name}-isShown {
         display: inline-block;
       }
     }

@@ -92,7 +92,7 @@
 
   /* Grid (breakpoint: #{$name}) */
 
-  @media (min-width: $screen-sm) {
+  @media (min-width: $min-width) {
 
     .#{$name}-Grid--1col > .Grid-cell {
       width: $size-full;
