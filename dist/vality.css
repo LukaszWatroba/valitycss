@@ -1,6 +1,6 @@
 /**
  * ValityCss - Sass-based, minimalist and scalable framework.
- * @version v0.3.2 - 2015-01-26
+ * @version v0.3.3 - 2015-02-16
  * @link http://lukaszwatroba.github.io/valitycss
  * @author Łukasz Wątroba <l@lukaszwatroba.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -1926,20 +1926,7 @@ hr {
  ***************************************/
 /* Intrinsic widths */
 .u-sizeFull {
-  box-sizing: border-box;
-  display: block;
   width: 100%;
-}
-
-.u-sizeFit,
-.u-sizeFitAlt {
-  display: block;
-  float: left;
-  width: auto;
-}
-
-.u-sizeFitAlt {
-  float: right;
 }
 
 .u-sizeAuto {
@@ -2061,32 +2048,7 @@ hr {
 /* Size (breakpoint: sm) */
 @media (min-width: 20em) {
   /* Intrinsic widths */
-  .u-sm-sizeFit,
-  .u-sm-sizeFitAlt {
-    display: block;
-    float: left;
-    width: auto;
-  }
-
-  .u-sm-sizeFitAlt {
-    float: right;
-  }
-
-  .u-sm-sizeFill {
-    display: block;
-    overflow: hidden;
-    width: auto;
-  }
-
-  .u-sm-sizeFillAlt {
-    display: table-cell;
-    max-width: 100%;
-    width: 10000px;
-  }
-
   .u-sm-sizeFull {
-    box-sizing: border-box;
-    display: block;
     width: 100%;
   }
 
@@ -2096,7 +2058,7 @@ hr {
 
   /* Proportional widths */
   .u-sm-size1of12 {
-    width: 16.66667%;
+    width: 8.33333%;
   }
 
   .u-sm-size1of10 {
@@ -2209,32 +2171,7 @@ hr {
 /* Size (breakpoint: md) */
 @media (min-width: 48em) {
   /* Intrinsic widths */
-  .u-md-sizeFit,
-  .u-md-sizeFitAlt {
-    display: block;
-    float: left;
-    width: auto;
-  }
-
-  .u-md-sizeFitAlt {
-    float: right;
-  }
-
-  .u-md-sizeFill {
-    display: block;
-    overflow: hidden;
-    width: auto;
-  }
-
-  .u-md-sizeFillAlt {
-    display: table-cell;
-    max-width: 100%;
-    width: 10000px;
-  }
-
   .u-md-sizeFull {
-    box-sizing: border-box;
-    display: block;
     width: 100%;
   }
 
@@ -2244,7 +2181,7 @@ hr {
 
   /* Proportional widths */
   .u-md-size1of12 {
-    width: 16.66667%;
+    width: 8.33333%;
   }
 
   .u-md-size1of10 {
@@ -2357,32 +2294,7 @@ hr {
 /* Size (breakpoint: lg) */
 @media (min-width: 64em) {
   /* Intrinsic widths */
-  .u-lg-sizeFit,
-  .u-lg-sizeFitAlt {
-    display: block;
-    float: left;
-    width: auto;
-  }
-
-  .u-lg-sizeFitAlt {
-    float: right;
-  }
-
-  .u-lg-sizeFill {
-    display: block;
-    overflow: hidden;
-    width: auto;
-  }
-
-  .u-lg-sizeFillAlt {
-    display: table-cell;
-    max-width: 100%;
-    width: 10000px;
-  }
-
   .u-lg-sizeFull {
-    box-sizing: border-box;
-    display: block;
     width: 100%;
   }
 
@@ -2392,7 +2304,7 @@ hr {
 
   /* Proportional widths */
   .u-lg-size1of12 {
-    width: 16.66667%;
+    width: 8.33333%;
   }
 
   .u-lg-size1of10 {

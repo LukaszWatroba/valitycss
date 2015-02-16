@@ -29,14 +29,14 @@ $link-color: #009cd6;
 The full list of vality variables can be found [here](https://github.com/LukaszWatroba/valitycss/blob/master/src/core/_settings.scss).
 
 
-## Core
+### Core
 - [_base.scss](./src/core/_base.scss)
 - [_helpers.scss](./src/core/_helpers.scss)
 - [_normalize.scss](./src/core/_normalize.scss)
 - [_settings.scss](./src/core/_settings.scss)
 
 
-## Components:
+### Components:
 - [_button.scss](./src/components/_button.scss)
 - [_button-group.scss](./src/components/_button-group.scss)
 - [_form.scss](./src/components/_form.scss)
@@ -53,7 +53,7 @@ The full list of vality variables can be found [here](https://github.com/LukaszW
 - [_spinner.scss](./src/components/_spinner.scss)
 
 
-## Utils
+### Utils
 - [_align.scss](./src/utils/_align.scss)
 - [_display.scss](./src/utils/_display.scss)
 - [_layout.scss](./src/utils/_layout.scss)
@@ -64,3 +64,11 @@ The full list of vality variables can be found [here](https://github.com/LukaszW
 - [_states.scss](./src/utils/_states.scss)
 - [_text.scss](./src/utils/_text.scss)
 - [_typography.scss](./src/utils/_typography.scss)
+
+
+- - -
+
+#### Credits
+  - [suitcss](https://github.com/necolas) by Nicolas Gallagher
+  - [inuitcss](https://github.com/inuitcss) by Harry Roberts
+
