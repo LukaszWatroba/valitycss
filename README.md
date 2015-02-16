@@ -66,9 +66,7 @@ The full list of vality variables can be found [here](https://github.com/LukaszW
 - [_typography.scss](./src/utils/_typography.scss)
 
 
-- - -
-
-#### Credits
+### Credits
   - [suitcss](https://github.com/necolas) by Nicolas Gallagher
   - [inuitcss](https://github.com/inuitcss) by Harry Roberts
 
